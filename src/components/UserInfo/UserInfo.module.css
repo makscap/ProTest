@@ -1,12 +1,7 @@
 .userMenuContainer {
-display: flex;
-align-items: center;
-padding-right: 20px;
-}
-
-.userMenuAvatar {
-    margin-left: 18px;
-    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
 }
 
 .userMenuName {
@@ -14,12 +9,15 @@ padding-right: 20px;
     font-size: 14px;
     line-height: 1.14;
     margin-right: 20px;
+    padding-top: 26px;
+    padding-bottom: 26px;
 }
 
 .userLink {
+
     display: inline-flex;
     text-decoration: none;
-    padding-right: 40px;
+    margin-right: 40px;
     padding-top: 26px;
     padding-bottom: 26px;
     font-weight: 500;
@@ -29,8 +27,24 @@ padding-right: 20px;
 }
 
 .userLinkActive {
-    color: #E84A5F;
+    position: relative;
 }
+
+.userLinkActive:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      border-radius: 1px;
+      background-color: #FF6B09;
+      position: absolute;
+      left: 0px;
+      bottom: 24px;
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    }
 
 .userButtonLogOut {
     width: 16px;
@@ -40,3 +54,10 @@ padding-right: 20px;
     padding: 0px;
     outline: none;
 }
+
+
+
+
+
+
+
