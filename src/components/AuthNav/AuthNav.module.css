@@ -1,0 +1,15 @@
+.authLink {
+    display: inline-flex;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #000000;
+}
+
+.authActiveLink {
+    color: #E84A5F;
+}
