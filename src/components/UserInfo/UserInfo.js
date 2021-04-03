@@ -1,17 +1,33 @@
 import { useDispatch } from "react-redux";
 import { authOperations } from "../redux/auth";
-// import defaultAvatar from "../../images/default-avatar.png";
 import SignOut from "../../images/sign-out.svg";
 import { NavLink } from 'react-router-dom';
 import styles from './UserInfo.module.css';
-import {Avatar} from '@material-ui/core'
+import {Avatar, Divider} from '@material-ui/core'
+import { makeStyles } from "@material-ui/styles";
 
+const useStyles = makeStyles(theme => ({
+  divider: {
+    marginRight: '20px',
+    backgroundColor: '#D7D7D7',
+  },
+  avatar: {
+    backgroundColor: '#FFFFFF',
+    color: '#555555',
+    boxShadow: '0px 1px 1px rgba(18, 29, 46, 0.1)',
+    width: '30px',
+    height: '30px',
+    fontSize: '14px',
+    marginLeft: '18px',
+    marginRight: '6px',
+  }
+}));
 
 export default function UserMenu() {
   const dispatch = useDispatch();
   const name = 'Group10';
-  // const avatar = defaultAvatar;
   const SignOutLogo = SignOut;
+  const classes = useStyles();
 
   return (
     <div className={styles.userMenuContainer}>
@@ -44,37 +60,27 @@ export default function UserMenu() {
           </NavLink>
         </div>
 
-              {/* <img src={avatar} alt="" width="30" className={styles.userMenuAvatar} /> */}
-      <Avatar className={styles.userMenuAvatar}>{name[0]}</Avatar>
+      <Avatar className={classes.avatar}>{name[0]}</Avatar>
+
+
+
       <span className={styles.userMenuName}>{name}</span>
 
-      
+      <Divider orientation="vertical" flexItem className={classes.divider}/>
 
-
-      
-        <div className={styles.userButtonLogOut}> 
-              {/* <button type="submit" className={styles.userButtonLogOut} onClick={() => dispatch(authOperations.logOut())}>
-                   <img
-                      src={SignOutLogo}
-                      alt="Logo"
-                      height="16"
-                      width="16"
+      <div className={styles.userButtonLogOut}>
+           <NavLink
+              to="/auth"
+              exact
+              className={styles.userButtonLogOut}
+              onClick={() => dispatch(authOperations.logOut())}>
+                <img
+                  src={SignOutLogo}
+                  alt="Logo"
+                  height="16"
+                  width="16"
                    />
-        </button> */}
-        
-                  <NavLink
-                          to="/auth"
-                          exact
-                          className={styles.userButtonLogOut}
-                          onClick={() => dispatch(authOperations.logOut())}
-          >
-                   <img
-                      src={SignOutLogo}
-                      alt="Logo"
-                      height="16"
-                      width="16"
-                   />
-          </NavLink>
+           </NavLink>
         </div>
     </div>
     
