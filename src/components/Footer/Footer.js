@@ -10,7 +10,7 @@ export default function Footer () {
                     <img src={copyright} alt="copyright" className={s.copyright}/>
                     2021 | All Rights Reserved | Developed with
                     <img src={heart} alt="" className={s.heart}/>
-                    by <a href="" className={s.link}>GoIT Students</a>
+                    by <a href="/" className={s.link}>GoIT Students</a>
                 </p>
             </div>
         </div>
