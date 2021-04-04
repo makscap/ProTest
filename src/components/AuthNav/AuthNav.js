@@ -1,12 +1,10 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styles from './AuthNav.module.css'
-
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styles from './AuthNav.module.css';
 
 export default function AuthNav() {
   return (
     <div>
-
       <NavLink
         to="/contacts"
         exact
@@ -15,7 +13,6 @@ export default function AuthNav() {
       >
         Контакты
       </NavLink>
-
     </div>
   );
 }
