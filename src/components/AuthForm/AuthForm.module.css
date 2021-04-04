@@ -1,0 +1,131 @@
+/* .Form_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
+.form {
+  width: 505px;
+  min-height: 527px;
+  height: auto;
+  /* margin: 99px 125px 99px 650px; */
+  padding: 42px 42px 42px 42px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  margin-top: 40px;
+
+  color: #000000;
+}
+
+.button__google {
+  display: block;
+  border: none;
+
+  margin-top: 30px;
+  background-color: #fafafa;
+  color: #000;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+}
+
+.input_item {
+  width: 425px;
+  height: 56px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  background-color: #ffffff;
+  border: 1px solid #ced2d1;
+
+  margin-top: 30px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+
+  padding-left: 20px;
+  padding-right: auto;
+}
+
+.button_reg {
+  margin-top: 40px;
+  padding: 25px 47px;
+
+  width: 201.52px;
+  height: 60px;
+
+  background: #ffffff;
+
+  border: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+
+  color: #000;
+}
+
+.button_reg:hover {
+  background: #ff6b09;
+  color: #ffffff;
+}
+
+.button_auth {
+  margin-top: 40px;
+  padding: 25px 47px;
+
+  width: 201.52px;
+  height: 60px;
+
+  background: #ff6b09;
+
+  border: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+
+  color: #ffffff;
+}
+
+.button_auth:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
