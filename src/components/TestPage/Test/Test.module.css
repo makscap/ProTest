@@ -1,0 +1,46 @@
+.test {
+  margin-top: 27px;
+  background-color: #ffffff;
+  padding: 50px 85px;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+}
+.currentNumber {
+  compose: number;
+  color: #ff6b09;
+  font-weight: 700;
+}
+
+.question {
+  margin-top: 5px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.36;
+  border-bottom: 1px solid #d9dce0;
+}
+
+.answers {
+  margin-top: 30px;
+}
+
+.option {
+}
+
+.option:not(:first-child) {
+  margin-top: 15px;
+}
+
+.defaultOption {
+  compose: option;
+  margin-top: 35px;
+}

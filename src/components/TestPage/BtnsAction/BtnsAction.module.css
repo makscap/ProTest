@@ -1,0 +1,42 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  width: 210px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  background-color: #ff6b01;
+  justify-content: flex-end;
+  padding: 0 15px;
+}
+.prevBtn {
+  composes: button;
+  flex-flow: row-reverse;
+}
+
+.nextBtn {
+  composes: button;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.prevArrow {
+  transform: scale(-1, 1);
+  fill: #ffffff;
+}
+
+.nextArrow {
+  margin-left: 20px;
+  fill: #000000;
+}
+
+.btnText {
+  margin: 0 11px;
+}
