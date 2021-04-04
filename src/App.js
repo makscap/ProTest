@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import MainPage from './components/MainPage/MainPage';
 import TestPage from './components/TestPage/TestPage';
 import Statefull from "./components/Statefull";
+import ContactsPage from './components/ContactsPage/ContactsPage'
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
     
           <Route path="/test">
           <TestPage />
+          </Route>
+
+          <Route path="/contacts">
+          <ContactsPage />
           </Route>
     
         </Switch>
