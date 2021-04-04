@@ -3,7 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import Container from './components/Container';
 import MainPage from './components/MainPage/MainPage';
 import TestPage from './components/TestPage/TestPage';
-import Statefull from './components/Statefull';
+import Statefull from "./components/Statefull";
+import Footer from './components/Footer/Footer';
 import AuthPage from './components/AuthPage';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           </Route>
         </Switch>
       </Suspense>
+      <Footer />
     </Container>
   );
 }

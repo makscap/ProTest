@@ -22,6 +22,7 @@ export default function MainPage() {
             pathname: `/test`,
             state: {
                 from: location.pathname,
+                label: "QA technical training",
             },
         }}
         >
@@ -36,6 +37,7 @@ export default function MainPage() {
             pathname: `/test`,
             state: {
                 from: location.pathname,
+                label: "Testing theory",
             },
         }}
         >
