@@ -11,13 +11,13 @@
     height: 88px;
     padding: 10px;
     font-family: Montserrat;
-    font-style: normal;
     font-weight: bold;
     font-size: 22px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.02em;
 }
+
 
 .author {
     width: 321px;
@@ -44,14 +44,23 @@ color: #555555;
 margin-top: 0;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 84px;
-    padding-bottom: 122px;
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 84px;
+        padding-bottom: 122px;
+    }
+
+
+@media screen and (max-width: 768px){
+   .buttons {
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+   }
 }
 
-button {
+.buttonFirst {
     width: 400px;
     height: 212px;
     font-family: Montserrat;
@@ -63,9 +72,6 @@ button {
     border: none;
     outline: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.buttonFirst {
     margin-right: 20px;
 background-color: #02172A;
 }
@@ -77,6 +83,17 @@ background-color: #02172A;
 }
 
 .buttonSecond {
+    width: 400px;
+    height: 212px;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 1.21;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 background-color: #FF6B01;
 }
 
@@ -87,8 +104,68 @@ background-color: #FF6B01;
 }
 
 .buttonText {
-    width: 200px;
+    width: 250px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .buttonFirst {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mainBlock {
+        padding-top: 30px;
+    }
+
+    .author {
+        width: 130px;
+        margin-bottom: 20px;
+    }
+
+    .authorName {
+        font-size: 12px;
+        line-height: 1.16;
+        margin-bottom: 4px;
+    }
+
+    .authorInfo {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .buttons {
+        display: flex;
+       align-items: center;
+       flex-direction: column;
+        margin-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .quotation {
+        width: 280px;
+        font-size: 12px;
+        line-height: 1.66;
+    }
+
+    .buttonFirst {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .buttonFirst,
+    .buttonSecond {
+      width: 280px;
+    }
+
+    .buttonText {
+        width: 190px;
+        font-size: 24px;
+        line-height: 1.20;
+        margin-bottom: 32px;
+    }
 }

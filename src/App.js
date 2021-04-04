@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import MainPage from './components/MainPage/MainPage';
 import TestPage from './components/TestPage/TestPage';
 import Statefull from "./components/Statefull";
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         </Switch>
     
       </Suspense>
-    
+      <Footer />
     </Container>
   );
 }
