@@ -40,7 +40,6 @@
   margin-top: 15px;
 }
 
-.defaultOption {
-  compose: option;
+.option:last-child {
   margin-top: 35px;
 }
