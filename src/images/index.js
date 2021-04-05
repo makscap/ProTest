@@ -48,24 +48,24 @@ import Andrei3 from './Andrei450.jpg';
       }
 }
 
-const intViewportWidth = window.innerWidth
+// const intViewportWidth = window.innerWidth
 
-const getViewport = () => {
+// const getViewport = () => {
 
-    if (intViewportWidth > 320 && intViewportWidth < 768) {
+//     if (intViewportWidth > 320 && intViewportWidth < 768) {
         
-         return 'sm'
-    }
-    if (intViewportWidth > 768 && intViewportWidth < 1280) {
-          return 'xs'
-    }
-    if (intViewportWidth > 1280) {
-         return 'xl'
-    }
-}
+//          return 'sm'
+//     }
+//     if (intViewportWidth > 768 && intViewportWidth < 1280) {
+//           return 'xs'
+//     }
+//     if (intViewportWidth > 1280) {
+//          return 'xl'
+//     }
+// }
 
-const currentImages = id => {
-    return images[id][getViewport()]
+const currentImages = (id, viewport) => {
+    return images[id][viewport]
 }
 
 
