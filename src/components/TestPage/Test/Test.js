@@ -29,8 +29,10 @@ export default function Test({
               value={item}
               onChange={addAnswer}
               checked={userСhoice[testNumber] === item}
+              className={s.input}
             />
-            {item}
+
+            <span className={s.item}> {item}</span>
           </label>
         ))}
       </form>
