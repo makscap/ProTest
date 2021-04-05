@@ -5,8 +5,9 @@ import s from './ContactPage.module.css';
 export default function ContactsPage() {
     return (
         <ul className={s.list}>
+            <div >
             {developers.map(developer => (
-                <li className={s.item} key={developer.id}>
+                <li className={s.link} key={developer.id}>
                     <Developer
                         
                         id={developer.id}
@@ -18,6 +19,7 @@ export default function ContactsPage() {
                 </li>
                 
             ))}
+                </div>
         </ul>
     )
 }

@@ -12,9 +12,9 @@ const Developer = ({
     id,
 }) => {
     return (
-      <div className={s.cards}>
+      <div>
                   
-        <div className={s.cardsOvarlay}>
+        <div>
           
           <picture>
     <source media="(min-width: 1200px)" srcSet={currentImages(id, 'xl')}/>
