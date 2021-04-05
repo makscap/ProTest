@@ -10,6 +10,7 @@ import technicalTest from './util/technicalTest.json';
 export default function TestPage() {
   const location = useLocation();
   const [testNumber, setTestNumber] = useState(0);
+  const [userСhoice, setUserСhoice] = useState({});
   console.log(testNumber);
 
   return (
@@ -20,9 +21,11 @@ export default function TestPage() {
       </div>
       <div>
         <Test
-          test={technicalTest[testNumber]}
+          question={technicalTest[testNumber]}
           testNumber={testNumber}
           testLength={technicalTest.length}
+          userСhoice={userСhoice}
+          setUserСhoice={setUserСhoice}
         />
       </div>
       <div>

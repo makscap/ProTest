@@ -1,8 +1,17 @@
 import s from './Test.module.css';
 
-export default function Test({ test, testNumber, testLength }) {
-  console.log(test);
-  const { question, answers } = test;
+export default function Test({
+  question,
+  testNumber,
+  testLength,
+  userСhoice,
+  setUserСhoice,
+}) {
+  const addAnswer = e => {
+    setUserСhoice({ ...userСhoice, [testNumber]: e.target.value });
+  };
+
+  const { textQuestion, answers } = question;
   return (
     <div className={s.test}>
       <p className={s.number}>
@@ -10,14 +19,29 @@ export default function Test({ test, testNumber, testLength }) {
         <span className={s.currentNumber}>{testNumber + 1}&nbsp;</span> /{' '}
         {testLength}
       </p>
-      <p className={s.question}>{question}</p>
-      <ul className={s.answers}>
+      <p className={s.question}>{textQuestion}</p>
+      <form className={s.answers}>
         {answers.map((item, index) => (
-          <li key={index} className={s.option}>
+          <label key={index} className={s.option}>
+            <input
+              type="radio"
+              name="answer"
+              value={item}
+              onChange={addAnswer}
+              checked={userСhoice[testNumber] === item}
+            />
             {item}
-          </li>
+          </label>
         ))}
-      </ul>
+      </form>
     </div>
   );
 }
+
+//  <ul className={s.answers}>
+//    {answers.map((item, index) => (
+//      <li key={index} className={s.option}>
+//        {item}
+//      </li>
+//    ))}
+//  </ul>;
