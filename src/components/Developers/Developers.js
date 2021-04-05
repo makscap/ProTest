@@ -1,11 +1,15 @@
 import defaultPhoto from '../../images/Photo280.png';
 import s from './Developers.module.css';
+import currentImages from '../../images/index';
+
+
 
 const Developer = ({
     photo = defaultPhoto,
   developerName,
     role,
-    text,
+  text,
+    id,
 }) => {
     return (
       <div className={s.cards}>
@@ -13,7 +17,7 @@ const Developer = ({
                     <div className={s.cardsOvarlay}>
                       <img
             className={s.mainImg}
-                        src={photo}
+                        src={currentImages(id)}
                         alt=""
                         sizes=""
                       />

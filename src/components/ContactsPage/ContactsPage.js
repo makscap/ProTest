@@ -6,9 +6,10 @@ export default function ContactsPage() {
     return (
         <ul className={s.list}>
             {developers.map(developer => (
-                <li className={s.item}>
+                <li className={s.item} key={developer.id}>
                     <Developer
-                    key={developer.id}
+                        
+                        id={developer.id}
                     photo={developer.url}
                     developerName={developer.developerName}
                     role={developer.role}
