@@ -17,9 +17,9 @@ const Developer = ({
         <div className={s.cardsOvarlay}>
           
           <picture>
-    <source media="(min-width: 1200px)" srcset={currentImages(id, 'xl')}/>
-    <source media="(min-width: 768px)" srcset={currentImages(id, 'xs')}/>
-    <img src={currentImages(id, 'sm')}/>
+    <source media="(min-width: 1200px)" srcSet={currentImages(id, 'xl')}/>
+    <source media="(min-width: 768px)" srcSet={currentImages(id, 'xs')}/>
+    <img src={currentImages(id, 'sm')} alt=""/>
       </picture>
                       {/* <img
             className={s.mainImg}
