@@ -8,11 +8,14 @@ import styles from './AuthPage.module.css';
 
 export default function AuthPage() {
   const dispatch = useDispatch();
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
+      case 'name':
+        return setName(value);
       case 'email':
         return setEmail(value);
       case 'password':
@@ -24,7 +27,8 @@ export default function AuthPage() {
 
   const handleRegister = e => {
     e.preventDefault();
-    dispatch(authOperations.register({ email, password }));
+    dispatch(authOperations.register({ name, email, password }));
+    setName('');
     setEmail('');
     setPassword('');
   };
@@ -53,6 +57,7 @@ export default function AuthPage() {
         </li>
         <li>
           <AuthForm
+            name={name}
             email={email}
             password={password}
             handleLogin={handleLogin}

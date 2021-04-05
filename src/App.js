@@ -3,13 +3,15 @@ import { Switch, Route } from 'react-router-dom';
 import Container from './components/Container';
 import MainPage from './components/MainPage/MainPage';
 import TestPage from './components/TestPage/TestPage';
-import Statefull from "./components/Statefull";
+import Statefull from './components/Statefull';
 
-import ContactsPage from './components/ContactsPage/ContactsPage'
+import ContactsPage from './components/ContactsPage/ContactsPage';
 
 import Footer from './components/Footer/Footer';
 import AuthPage from './components/AuthPage';
 
+import PrivatRoute from './components/Routes/PrivatRoute';
+import PublicRoute from './components/Routes/PublicRoute'; //restricted
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
       <Statefull />
       <Suspense fallback={<h2>Loading...</h2>}>
         <Switch>
-          <Route path="/auth" exact>
+          <Route exact path="/auth">
             <AuthPage />
           </Route>
 
@@ -30,10 +32,8 @@ function App() {
           </Route>
 
           <Route path="/contacts">
-          <ContactsPage />
+            <ContactsPage />
           </Route>
-    
-
         </Switch>
       </Suspense>
       <Footer />
