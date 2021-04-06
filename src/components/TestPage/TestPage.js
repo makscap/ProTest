@@ -9,7 +9,7 @@ import technicalTest from './util/technicalTest.json';
 
 export default function TestPage() {
   const location = useLocation();
-  const [testNumber, setTestNumber] = useState(25);
+  const [testNumber, setTestNumber] = useState(0);
   const [userСhoice, setUserСhoice] = useState({});
 
   return (
