@@ -31,9 +31,13 @@
 
 .answers {
   margin-top: 30px;
+  display: flex;
+  flex-flow: column;
 }
 
 .option {
+  display: flex;
+  align-items: baseline;
 }
 
 .option:not(:first-child) {
@@ -42,4 +46,13 @@
 
 .option:last-child {
   margin-top: 35px;
+}
+
+.input {
+  margin-right: 20px;
+  display: block;
+}
+
+.item {
+  display: block;
 }
