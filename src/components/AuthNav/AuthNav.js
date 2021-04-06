@@ -6,7 +6,7 @@ export default function AuthNav() {
   return (
     <div>
       <NavLink
-        to="/contacts"
+        to="/materials"
         exact
         className={styles.authLink}
         activeClassName={styles.authActiveLink}
