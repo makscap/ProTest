@@ -11,7 +11,15 @@ export default function AuthNav() {
         className={styles.authLink}
         activeClassName={styles.authActiveLink}
       >
-        Контакты
+        Materials
+      </NavLink>
+      <NavLink
+        to="/contacts"
+        exact
+        className={styles.authLink}
+        activeClassName={styles.authActiveLink}
+      >
+        Contacts
       </NavLink>
     </div>
   );

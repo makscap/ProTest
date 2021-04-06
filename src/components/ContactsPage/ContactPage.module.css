@@ -1,4 +1,11 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.link {
+  background: #ffffff;
+  width: 354px;
+  margin: 20px;
 }
