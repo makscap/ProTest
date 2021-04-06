@@ -9,9 +9,8 @@ import technicalTest from './util/technicalTest.json';
 
 export default function TestPage() {
   const location = useLocation();
-  const [testNumber, setTestNumber] = useState(0);
+  const [testNumber, setTestNumber] = useState(25);
   const [userСhoice, setUserСhoice] = useState({});
-  console.log(testNumber);
 
   return (
     <div className={s.wrapper}>

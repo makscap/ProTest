@@ -1,13 +1,14 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .wrapper {
   width: 820px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 40px;
   padding-bottom: 97px;
+  background-color: #f5f6fb;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
