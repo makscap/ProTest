@@ -8,43 +8,43 @@ import Andrei3 from './Andrei450.jpg';
   const images = {
       id1: {
           sm: Nikolai1,
-          xs: Nikolai2,
-          xl: Nikolai3
+          xs: Nikolai3,
+          xl: Nikolai2
       },
       id2: {
           sm: Andrei1,
-          xs: Andrei2,
-          xl: Andrei3
+          xs: Andrei3,
+          xl: Andrei2
       },
       id3: {
           sm: Andrei1,
-          xs: Andrei2,
-          xl: Andrei3
+          xs: Andrei3,
+          xl: Andrei2
       },
       id4: {
           sm: Andrei1,
-          xs: Andrei2,
-          xl: Andrei3
+          xs: Andrei3,
+          xl: Andrei2
       },
       id5: {
           sm: Andrei1,
-          xs: Andrei2,
-          xl: Andrei3
+          xs: Andrei3,
+          xl: Andrei2
       },
       id6: {
           sm: Andrei1,
-          xs: Andrei2,
-          xl: Andrei3
+          xs: Andrei3,
+          xl: Andrei2
       },
       id7: {
           sm: Andrei1,
-          xs: Andrei2,
-          xl: Andrei3
+          xs: Andrei3,
+          xl: Andrei2
       },
       id8: {
           sm: Andrei1,
-          xs: Andrei2,
-          xl: Andrei3
+          xs: Andrei3,
+          xl: Andrei2
       }
 }
 
