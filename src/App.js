@@ -3,7 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import Container from './components/Container';
 import MainPage from './components/MainPage/MainPage';
 import TestPage from './components/TestPage/TestPage';
-import Statefull from "./components/Statefull";
+import Statefull from './components/Statefull';
+import UsefulInfo from './components/UsefulInfo';
 
 import ContactsPage from './components/ContactsPage/ContactsPage'
 
@@ -17,6 +18,7 @@ function App() {
       <Statefull />
       <Suspense fallback={<h2>Loading...</h2>}>
         <Switch>
+    
           <Route path="/auth" exact>
             <AuthPage />
           </Route>
@@ -29,14 +31,21 @@ function App() {
             <TestPage />
           </Route>
 
+
+          <Route path="/materials">
+            <UsefulInfo />
+          </Route>
+        </Switch>
+      </Suspense>
+
           <Route path="/contacts">
           <ContactsPage />
           </Route>
     
-
         </Switch>
       </Suspense>
       <Footer />
+
     </Container>
   );
 }

@@ -1,0 +1,57 @@
+.section {
+  width: 100vw;
+  height: 100%;
+  /* margin-left: 190px;
+  margin-right: 694px; */
+  /* background-color: #e5e5e5; */
+  margin: 0;
+  background-image: url(../../images/fond-1280.jpg);
+  /* padding-left: 20px;
+  padding-right: 20px; */
+}
+h2 {
+  margin-left: 190px;
+  margin-right: 694px;
+}
+.usefulInfo {
+  margin-left: 250px;
+  margin-right: 694px;
+  width: 396px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+.materials {
+  width: 295px;
+  left: 250px;
+  top: 243px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0;
+  /* or 157% */
+
+  letter-spacing: 0.02em;
+
+  color: #000000;
+}
+.backlink {
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.backlink::after {
+  content: '';
+  display: block;
+  width: 321px;
+  height: 1px;
+  margin-top: 22px;
+  opacity: 0.15;
+  border: 1px solid #00122f;
+}
