@@ -6,11 +6,14 @@ import TestPage from './components/TestPage/TestPage';
 import Statefull from './components/Statefull';
 import UsefulInfo from './components/UsefulInfo';
 
-import ContactsPage from './components/ContactsPage/ContactsPage'
+
+import ContactsPage from './components/ContactsPage/ContactsPage';
 
 import Footer from './components/Footer/Footer';
 import AuthPage from './components/AuthPage';
 
+import PrivatRoute from './components/Routes/PrivatRoute';
+import PublicRoute from './components/Routes/PublicRoute'; //restricted
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
         <Switch>
     
           <Route path="/auth" exact>
+
             <AuthPage />
           </Route>
 
@@ -39,9 +43,9 @@ function App() {
       </Suspense>
 
           <Route path="/contacts">
-          <ContactsPage />
+            <ContactsPage />
           </Route>
-    
+
         </Switch>
       </Suspense>
       <Footer />

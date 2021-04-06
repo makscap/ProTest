@@ -1,11 +1,16 @@
-// import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { authOperations } from '../redux/auth';
+import { FcGoogle } from 'react-icons/fc';
 
 import styles from './AuthForm.module.css';
 
 const AuthForm = props => {
-  const { email, password, handleLogin, handleRegister, handleChange } = props;
+  const {
+    name,
+    email,
+    password,
+    handleLogin,
+    handleRegister,
+    handleChange,
+  } = props;
 
   return (
     <div className={styles.Form_container}>
@@ -14,12 +19,29 @@ const AuthForm = props => {
           You can use your Google Account to authorize:
         </p>
         <label>
-          <button className={styles.button__google}>Google</button>
+          <button className={styles.button__google}>
+            <FcGoogle className={styles.google_icon} />
+            Google
+          </button>
         </label>
 
         <p className={styles.header}>
           Or login to our app using e-mail and password:
         </p>
+
+        <label>
+          <input
+            type="text"
+            name="name"
+            required
+            autoFocus
+            value={name}
+            autoComplete="off"
+            placeholder="Name"
+            onChange={handleChange}
+            className={styles.input_item}
+          />
+        </label>
 
         <label>
           <input
