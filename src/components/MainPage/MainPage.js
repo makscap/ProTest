@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import s from './MainPage.module.css';
 import arrow from '../images/arrow.svg';
+import {TypeTest} from '../../helpers/constant'
 
 export default function MainPage() {
     const location = useLocation();
@@ -22,6 +23,7 @@ export default function MainPage() {
             pathname: `/test`,
             state: {
                 from: location.pathname,
+                testName: TypeTest.TECHNICAL,
             },
         }}
         >
@@ -36,6 +38,7 @@ export default function MainPage() {
             pathname: `/test`,
             state: {
                 from: location.pathname,
+                testName: TypeTest.THEORY,
             },
         }}
         >
