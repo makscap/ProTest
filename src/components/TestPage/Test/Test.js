@@ -6,12 +6,16 @@ export default function Test({
   testLength,
   userСhoice,
   setUserСhoice,
+  setResult,
 }) {
+  const { question: textQuestion, answers, rightAnswer } = question;
+
   const addAnswer = e => {
+    const userAnswer = e.target.value;
+    setResult({ [testNumber]: userAnswer === rightAnswer ? 1 : 0 });
     setUserСhoice({ ...userСhoice, [testNumber]: e.target.value });
   };
 
-  const { question: textQuestion, answers } = question;
   return (
     <div className={s.test}>
       <p className={s.number}>

@@ -11,12 +11,20 @@ export default function TestPage() {
   const location = useLocation();
   const [testNumber, setTestNumber] = useState(0);
   const [userСhoice, setUserСhoice] = useState({});
+  const [result, setResult] = useState({});
+
+  const updateResult = item => {
+    setResult({
+      ...result,
+      item,
+    });
+  };
 
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
         <TestName testName={location.state.testName} />
-        <FinishTestBtn />
+        <FinishTestBtn result={result} />
       </div>
       <div>
         <Test
@@ -25,6 +33,7 @@ export default function TestPage() {
           testLength={technicalTest.length}
           userСhoice={userСhoice}
           setUserСhoice={setUserСhoice}
+          setResult={updateResult}
         />
       </div>
       <div>
