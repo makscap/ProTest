@@ -1,0 +1,36 @@
+{
+    "literature": [
+        {
+            "id": 1,
+            "url": "https://codernet.ru/books/qa/",
+            "name": "Testing dot.com Savin."
+        },
+        {
+            "id": 2,
+            "url": "https://www.google.com/search?q=dou.ua&rlz=1C1CHBD_ruUA794UA794&oq=dou&aqs=chrome.1.69i57j35i39j0l4j0i433j0l3.5280j0j15&sourceid=chrome&ie=UTF-8",
+            "name": "A mental hospital in the hands of patients. "
+        },
+        {
+            "id": 3,
+            "url": "https://scholar.google.com.ua/scholar?q=Scrum.+J.+Sutherland.&hl=uk&as_sdt=0&as_vis=1&oi=scholart",
+            "name": "Scrum. J. Sutherland."
+        }
+    ],
+    "resources": [
+        {
+            "id": 1,
+            "url": "https://dou.ua/",
+            "name": "Dou.ua"
+        },
+        {
+            "id": 2,
+            "url": "https://habr.com/ru/",
+            "name": "Habr"
+        },
+        {
+            "id": 3,
+            "url": "https://goit.ua/",
+            "name": "goit.ua"
+        }
+    ]
+}
