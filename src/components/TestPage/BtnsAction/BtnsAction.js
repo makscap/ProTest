@@ -14,30 +14,29 @@ export default function BtnAction({
       updateNumber(numberQuestion - 1);
     }
   };
-  console.log(testLength);
-  console.log(numberQuestion);
 
   return (
     <div className={s.buttons}>
-      <button
-        type="button"
-        className={s.prevBtn}
-        disabled={numberQuestion === 0}
-        onClick={() => handleQuestionChange('prev')}
-      >
-        <p className={s.btnText}>Previous question</p>
-        <Arrow className={s.prevArrow} />
-      </button>
-
-      <button
-        type="button"
-        className={s.nextBtn}
-        disabled={numberQuestion + 1 === testLength}
-        onClick={() => handleQuestionChange('next')}
-      >
-        <p className={s.btnText}>Next question</p>
-        <Arrow className={s.nextArrow} />
-      </button>
+      {numberQuestion !== 0 && (
+        <button
+          type="button"
+          className={s.prevBtn}
+          onClick={() => handleQuestionChange('prev')}
+        >
+          <p className={s.btnText}>Previous question</p>
+          <Arrow className={s.prevArrow} />
+        </button>
+      )}
+      {numberQuestion + 1 !== testLength && (
+        <button
+          type="button"
+          className={s.nextBtn}
+          onClick={() => handleQuestionChange('next')}
+        >
+          <p className={s.btnText}>Next question</p>
+          <Arrow className={s.nextArrow} />
+        </button>
+      )}
     </div>
   );
 }

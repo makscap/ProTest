@@ -1,23 +1,47 @@
-.section {
-  width: 100vw;
-  height: 100%;
-  /* margin-left: 190px;
-  margin-right: 694px; */
-  /* background-color: #e5e5e5; */
+h2,
+li {
   margin: 0;
-  background-image: url(../../images/fond-1280.jpg);
-  /* padding-left: 20px;
-  padding-right: 20px; */
+  padding: 0;
+  cursor: pointer;
 }
+
+img {
+  display: block;
+  /* max-width: 100%; */
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.section {
+  margin: 0;
+  min-height: 445px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../images/fond-320.jpg);
+}
+@media screen and (min-width: 768px) {
+  .section {
+    max-width: 1279px;
+    background-image: url(../../images/fond-768.jpg);
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    background-image: url(../../images/fond-1280.jpg);
+  }
+}
+
 h2 {
+  width: 396px;
   margin-left: 190px;
   margin-right: 694px;
 }
 .usefulInfo {
   margin-left: 250px;
-  margin-right: 694px;
+  padding-right: 694px;
   width: 396px;
-  height: 170px;
+  height: 95px;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -27,6 +51,7 @@ h2 {
 
 .materials {
   width: 295px;
+  height: 95px;
   left: 250px;
   top: 243px;
   font-family: Montserrat;
@@ -35,6 +60,7 @@ h2 {
   font-size: 14px;
   line-height: 22px;
   padding: 0;
+
   /* or 157% */
 
   letter-spacing: 0.02em;
@@ -55,3 +81,32 @@ h2 {
   opacity: 0.15;
   border: 1px solid #00122f;
 }
+.literature {
+  padding-top: 98px;
+  margin-bottom: 0;
+}
+.resources {
+  margin-top: 38px;
+  padding-bottom: 262px;
+}
+/* для mobile */
+/* @media screen and (max-width: 767px) {
+  .section {
+    max-width: 320px;
+    background-image: url(../../images/fond-320.jpg);
+  }
+} */
+/* для планшета */
+/* @media screen and (max-width: 1279px) and (min-width: 321px) {
+  .section {
+    max-width: 768px;
+    background-image: url(../../images/fond-768.jpg);
+  }
+} */
+/* для десктопа */
+/* @media screen and (min-width: 769px) {
+  .section {
+    max-width: 1280px;
+    background-image: url(../../images/fond-1280.jpg);
+  }
+} */

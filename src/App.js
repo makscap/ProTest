@@ -6,6 +6,11 @@ import TestPage from './components/TestPage/TestPage';
 import Statefull from './components/Statefull';
 import UsefulInfo from './components/UsefulInfo';
 
+import {
+  literature,
+  resources,
+} from './components/UsefulInfo/Useful-info.json';
+
 import ContactsPage from './components/ContactsPage/ContactsPage';
 
 import Footer from './components/Footer/Footer';
@@ -20,7 +25,9 @@ function App() {
       <Statefull />
       <Suspense fallback={<h2>Loading...</h2>}>
         <Switch>
+
           <Route path="/auth" exact restricted>
+
             <AuthPage />
           </Route>
 
@@ -33,7 +40,7 @@ function App() {
           </Route>
 
           <Route path="/materials">
-            <UsefulInfo />
+            <UsefulInfo literature={literature} resources={resources} />
           </Route>
 
           <Route path="/contacts">

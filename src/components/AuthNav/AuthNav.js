@@ -5,14 +5,14 @@ import styles from './AuthNav.module.css';
 export default function AuthNav() {
   return (
     <div>
-      <NavLink
-        to="/contacts"
+      {/* <NavLink
+        to="/materials"
         exact
         className={styles.authLink}
         activeClassName={styles.authActiveLink}
       >
         Materials
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/contacts"
         exact

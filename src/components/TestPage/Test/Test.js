@@ -11,7 +11,7 @@ export default function Test({
     setUserСhoice({ ...userСhoice, [testNumber]: e.target.value });
   };
 
-  const { textQuestion, answers } = question;
+  const { question: textQuestion, answers } = question;
   return (
     <div className={s.test}>
       <p className={s.number}>
@@ -39,11 +39,3 @@ export default function Test({
     </div>
   );
 }
-
-//  <ul className={s.answers}>
-//    {answers.map((item, index) => (
-//      <li key={index} className={s.option}>
-//        {item}
-//      </li>
-//    ))}
-//  </ul>;
