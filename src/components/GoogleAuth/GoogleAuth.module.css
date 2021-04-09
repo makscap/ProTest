@@ -1,0 +1,31 @@
+.button__google {
+  width: 159px;
+  height: 61px;
+  display: block;
+  border: none;
+  padding: 17px 38px 17px 38px;
+
+  margin-top: 30px;
+  background-color: #fafafa;
+  color: #000;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+}
+
+.google_icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.google_container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

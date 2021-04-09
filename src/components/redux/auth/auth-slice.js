@@ -6,6 +6,8 @@ const initialState = {
   token: null,
   isLoggedIn: false,
   isFetchingCurrentUser: false,
+  isRegisterError: null,
+  isLoginError: null,
 };
 
 const authSlice = createSlice({
@@ -17,10 +19,22 @@ const authSlice = createSlice({
       state.token = action.payload.token;
       state.isLoggedIn = true;
     },
+    [authOperations.register.pending](state) {
+      state.isRegisterError = true;
+    },
+    [authOperations.register.rejected](state) {
+      state.isRegisterError = 'Registration failed. Please try again.';
+    },
     [authOperations.logIn.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
+    },
+    [authOperations.logIn.pending](state) {
+      state.isLoginError = true;
+    },
+    [authOperations.logIn.rejected](state) {
+      state.isLoginError = false;
     },
     [authOperations.logOut.fulfilled](state) {
       state.user = { name: null, email: null };
