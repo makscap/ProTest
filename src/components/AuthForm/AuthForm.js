@@ -1,4 +1,6 @@
-import { FcGoogle } from 'react-icons/fc';
+import GoogleAuth from '../GoogleAuth';
+import { useSelector } from 'react-redux';
+import authSelectors from '../redux/auth/auth-selectors';
 
 import styles from './AuthForm.module.css';
 
@@ -12,23 +14,18 @@ const AuthForm = props => {
     handleChange,
   } = props;
 
+  const error = useSelector(authSelectors.getErrorRegister);
+
   return (
     <div className={styles.Form_container}>
       <form className={styles.form}>
         <p className={styles.header}>
           You can use your Google Account to authorize:
         </p>
-        <label>
-          <button className={styles.button__google}>
-            <FcGoogle className={styles.google_icon} />
-            Google
-          </button>
-        </label>
-
+        <GoogleAuth className={styles.btn_google} />
         <p className={styles.header}>
           Or login to our app using e-mail and password:
         </p>
-
         <label>
           <input
             type="text"
@@ -42,7 +39,6 @@ const AuthForm = props => {
             className={styles.input_item}
           />
         </label>
-
         <label>
           <input
             type="text"
@@ -56,7 +52,6 @@ const AuthForm = props => {
             className={styles.input_item}
           />
         </label>
-
         <label>
           <input
             type="password"
@@ -70,7 +65,7 @@ const AuthForm = props => {
             className={styles.input_item}
           />
         </label>
-
+        {error && <p className={styles.error_message}>{error}</p>}
         <div className={styles.button_container}>
           <button onClick={handleLogin} className={styles.button_reg}>
             Sign in
