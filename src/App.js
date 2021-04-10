@@ -41,7 +41,7 @@ function App() {
             <ContactsPage />
           </Route>
 
-          <Route path="/result">
+          <Route path="/results">
             <ResultPage />
           </Route>
         </Switch>

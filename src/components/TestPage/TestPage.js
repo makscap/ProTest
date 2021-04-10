@@ -27,7 +27,7 @@ export default function TestPage() {
 
     const totalResult = resultArray.reduce((acc, item) => acc + item, 0);
     history.push({
-      pathname: '/result',
+      pathname: '/results',
       state: {
         testName: location.state.testName,
         result: totalResult,
