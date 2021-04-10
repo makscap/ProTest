@@ -1,41 +1,37 @@
-import defaultPhoto from '../../images/Photo280.png';
-import s from './Developers.module.css';
-import currentImages from '../../images/index';
 
+// import { Link } from 'react-router-dom';
+import s from './Developers.module.css';
+import currentImages from '../Photo/index';
 
 
 const Developer = ({
-    photo = defaultPhoto,
+  
   developerName,
     role,
   text,
+  link,
     id,
 }) => {
     return (
-      <div>
-                  
-        <div>
-          
+      <div>   
+        <a className={s.link} href={link} target="blank">
+
           <picture>
-    <source media="(min-width: 1200px)" srcSet={currentImages(id, 'xl')}/>
-    <source media="(min-width: 768px)" srcSet={currentImages(id, 'xs')}/>
+    <source media="(min-width: 1280px)" srcSet={currentImages(id, 'xl')}/>
+            <source media="(min-width: 768px)" srcSet={currentImages(id, 'xs')} />
+            <source media="(min-width: 320px)" srcSet={currentImages(id, 'sm')}/>
     <img src={currentImages(id, 'sm')} alt=""/>
-      </picture>
-                      {/* <img
-            className={s.mainImg}
-                        src={currentImages(id)}
-                        alt=""
-                        sizes=""
-                      /> */}
-
-                      
-                    </div>
-
+      </picture>                        
+               
         <div className={s.sections}>
-          <h2 className={s.sectionTitlep}>{developerName}</h2>
-          <p className={s.sectionTextp}>{role}</p>
-                      <p className={s.sectionTextp}>{text}</p>
+          <h2 className={s.name}>{developerName}</h2>
+          <p className={s.role}>{role}</p>
+                      <p className={s.text}>{text}</p>
                     </div>
+          
+             </a>
+             
+          
             
             </div>
 

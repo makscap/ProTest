@@ -1,58 +1,74 @@
 [
     {
         "id": "id1",
-        "developerName": "NAME",
+        "developerName": "Maksym Borysov",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/makscap"
 
 },
 {
         "id": "id2",
-        "developerName": "NAME",
+        "developerName": "Viktoriia Melanchenko",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/VikMelanchenko"
 
 },
 {
         "id": "id3",
         "developerName": "NAME",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/makscap"
 
 },
 {
         "id": "id4",
-        "developerName": "NAME",
+        "developerName": "Yulia Kovalenko",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/kapustikk"
 
 },
 {
         "id": "id5",
-        "developerName": "NAME",
+        "developerName": "Taras Shcherbatenko",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/stadvar"
 
 },
 {
         "id": "id6",
         "developerName": "NAME",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/makscap"
 
 },
 {
         "id": "id7",
         "developerName": "NAME",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/makscap"
 
 },
 {
         "id": "id8",
-        "developerName": "NAME",
+        "developerName": "Andrey Mashko",
         "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century."
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/andreymashko7"
+
+},
+{
+        "id": "id9",
+        "developerName": "Aleksandr Sibirko",
+        "role": "Front-End Developer",
+        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "link": "https://github.com/AlexandrSybirko"
 
 }
 ]
