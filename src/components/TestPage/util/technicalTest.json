@@ -1,11 +1,5 @@
 [
   {
-    "question": "How many testing principles are there?",
-    "questionId": 1,
-    "answers": ["5", "6", "7", "8", "9", "I don't know"],
-    "rightAnswer": "7"
-  },
-  {
     "question": "Verification is – ",
     "questionId": 2,
     "answers": [
@@ -45,19 +39,7 @@
     ],
     "rightAnswer": "All requirements must be known at the beginning of the project life cycle"
   },
-  {
-    "question": "THIS software development methodology is mainly aimed at reducing the work being done at the moment. In this methodology: there are no time limits for either tasks or sprints; there are more and fewer tasks; There is no direct need to set deadlines for completing tasks, but you still need to measure them for a general presentation. What methodology are we talking about?",
-    "questionId": 5,
-    "answers": [
-      "Waterfall",
-      "Scrum",
-      "Agile",
-      "Kanban",
-      "This definition applies to all methodologies",
-      "There is not a right option"
-    ],
-    "rightAnswer": "Kanban"
-  },
+
   {
     "question": "What does XP stands for in testing",
     "questionId": 6,
@@ -148,160 +130,6 @@
       "All options are incorrect"
     ],
     "rightAnswer": "All options are correct"
-  },
-  {
-    "question": "What is dynamic testing?",
-    "questionId": 13,
-    "answers": [
-      "This is testing by only executing code with different input values and confirming the results",
-      "This is testing by executing only the program with different input values and confirming the results",
-      "This is testing by executing a code or program with different input values and confirming the results",
-      "This is testing by executing code",
-      "This is testing with different inputs and validation of the results.",
-      "I don't know"
-    ],
-    "rightAnswer": "This is testing by executing a code or program with different input values and confirming the results"
-  },
-  {
-    "question": "What is formal testing?",
-    "questionId": 14,
-    "answers": [
-      "Verification of software, according to the test plan, test procedures and relevant documentation, taking into account the wishes of the client",
-      "Validation of software, according to the test plan, test procedures and relevant documentation, taking into account the wishes of the client",
-      "Verification of software, according to test procedures and relevant documentation, without taking into account the wishes of the client",
-      "I don't know"
-    ],
-    "rightAnswer": "Verification of software, according to the test plan, test procedures and relevant documentation, taking into account the wishes of the client"
-  },
-  {
-    "question": "The usability of the interface is usually determined through a number of qualitative indicators",
-    "questionId": 15,
-    "answers": [
-      "Learnability, efficiency, errors, satisfaction",
-      "Learnability, memorability, errors, satisfaction",
-      "Efficiency, memorability, errors, satisfaction",
-      "Learnability, efficiency, memorability, errors",
-      "Learnability, efficiency, memorability, errors, satisfaction",
-      "I don't know"
-    ],
-    "rightAnswer": "Learnability, efficiency, memorability, errors, satisfaction"
-  },
-  {
-    "question": "What is Showstopper defect",
-    "questionId": 16,
-    "answers": [
-      "A defect that forces you to rollback the last release",
-      "A defect that allows you to make an immediate release without testing",
-      "A defect that forces you to stop the testing progress",
-      "A defect, which is that there is no defect. But there must be",
-      "All options are correct",
-      "All options are incorrect"
-    ],
-    "rightAnswer": "A defect that forces you to stop the testing progress"
-  },
-  {
-    "question": "STLC is – ",
-    "questionId": 17,
-    "answers": [
-      "The stage at which the testing strategy is determined",
-      "Software testing life cycle",
-      "Final stage of software testing",
-      "This abbreviation has nothing to do with testing",
-      "All options are correct",
-      "All options are incorrect"
-    ],
-    "rightAnswer": "Software testing life cycle"
-  },
-  {
-    "question": "Which of the following is superfluous",
-    "questionId": 18,
-    "answers": [
-      "Test plan",
-      "Bug report",
-      "Backlog",
-      "Check list",
-      "Cheat list",
-      "Set of test cases and kits"
-    ],
-    "rightAnswer": "Backlog"
-  },
-  {
-    "question": "The test plan answers questions like this",
-    "questionId": 19,
-    "answers": [
-      "What's need to be tested",
-      "What's going to be tested",
-      "How and when is it going to be tested",
-      "Test start and end criteria",
-      "All options are correct",
-      "All options are incorrect"
-    ],
-    "rightAnswer": "All options are correct"
-  },
-  {
-    "question": "What is superfluous in the criteria for launching testing?",
-    "questionId": 20,
-    "answers": [
-      "SRS - software",
-      "FRS",
-      "Use case",
-      "Test plan",
-      "All options are correct",
-      "All options are incorrect"
-    ],
-    "rightAnswer": "All options are incorrect"
-  },
-  {
-    "question": "What is superfluous in the criteria for completing testing",
-    "questionId": 21,
-    "answers": [
-      "Testing report",
-      "Metrics",
-      "Test Analysis Report",
-      "Test case",
-      "All options are correct",
-      "All options are incorrect"
-    ],
-    "rightAnswer": "Test case"
-  },
-  {
-    "question": "This is a comprehensive user testing of concurrent access to an application to verify the impact on a code, module or database. Mainly detects deadlocks in code.",
-    "questionId": 22,
-    "answers": [
-      "Currency testing",
-      "Testing the web application",
-      "Functional testing",
-      "Interface testing",
-      "Gamma testing",
-      "I don't know"
-    ],
-    "rightAnswer": "Currency testing"
-  },
-  {
-    "question": "This testing is done on the website to check loading, performance, security, functionality, interface, compatibility and other usability related issues",
-    "questionId": 23,
-    "answers": [
-      "Currency testing",
-      "Testing the web application",
-      "Functional testing",
-      "Interface testing",
-      "Gamma testing",
-      "I don't know"
-    ],
-    "rightAnswer": "Testing the web application"
-  },
-  {
-    "question": "Item testing (or side testing) allows you to test individual work of source code units",
-    "questionId": 24,
-    "answers": [
-      "Currency testing",
-      "Testing the web application",
-      "Functional testing",
-      "Interface testing",
-      "Gamma testing",
-      "I don't know"
-    ],
-    "rightAnswer": "Functional testing"
   },
   {
     "question": "Interface testing checks the interaction of individual modules. Most often used to test the user interface of GUI applications",

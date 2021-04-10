@@ -1,11 +1,12 @@
 import s from './FinishTestBtn.module.css';
 
-export default function FinishTestBtn() {
+export default function FinishTestBtn({ showResult }) {
   const finishTest = () => {
     const result = window.confirm(
       'Вы действительно хотите закончить выполнения теста и получить результаты?',
     );
     if (!result) return;
+    showResult();
   };
 
   return (

@@ -5,6 +5,7 @@ import MainPage from './components/MainPage/MainPage';
 import TestPage from './components/TestPage/TestPage';
 import Statefull from './components/Statefull';
 import UsefulInfo from './components/UsefulInfo';
+import ResultPage from './components/ResultPage/ResultPage';
 
 import {
   literature,
@@ -45,6 +46,10 @@ function App() {
 
           <Route path="/contacts">
             <ContactsPage />
+          </Route>
+
+          <Route path="/results">
+            <ResultPage />
           </Route>
         </Switch>
       </Suspense>
