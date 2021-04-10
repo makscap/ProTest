@@ -1,7 +1,7 @@
 .userMenuContainer {
     display: flex;
     align-items: center;
-    padding-right: 20px;
+    height: 100%;
 }
 
 .userMenuName {
@@ -26,6 +26,10 @@
     color: #000000;
 }
 
+.userLink:last-child {
+    margin-right: 68px;
+}
+
 .userLinkActive {
     position: relative;
 }
@@ -44,20 +48,21 @@
       transition-property: opacity;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-    }
-
-.userButtonLogOut {
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    border: none;
-    padding: 0px;
-    outline: none;
 }
 
+.LogOutBox {
+    display: flex;
+    margin: 0 20px 0 21px;   
+}
 
-
-
-
-
-
+.logOutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+    border-left: 1px solid #e2e3e5;
+    cursor: pointer;
+}
