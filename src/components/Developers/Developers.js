@@ -14,7 +14,7 @@ const Developer = ({
 }) => {
     return (
       <div>   
-        <a className={s.link} href={link}>
+        <a className={s.link} href={link} target="blank">
 
           <picture>
     <source media="(min-width: 1280px)" srcSet={currentImages(id, 'xl')}/>
