@@ -1,10 +1,12 @@
-// import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
+
 import AuthForm from '../AuthForm/AuthForm';
 
 import styles from './AuthPage.module.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function AuthPage() {
   const dispatch = useDispatch();
@@ -27,17 +29,31 @@ export default function AuthPage() {
 
   const handleRegister = e => {
     e.preventDefault();
+    warningMessage();
+
     dispatch(authOperations.register({ name, email, password }));
+
     setName('');
     setEmail('');
     setPassword('');
+    console.log('Кликаем для регистрации пользователя');
   };
 
   const handleLogin = e => {
     e.preventDefault();
+    warningMessage();
+
     dispatch(authOperations.logIn({ email, password }));
     setEmail('');
     setPassword('');
+    console.log('Кликаем для авторизации пользователя');
+  };
+
+  const warningMessage = () => {
+    if (email.trim() === '' || password.trim === '') {
+      toast.error('Email and password fields are required');
+      return;
+    }
   };
 
   return (
@@ -47,11 +63,12 @@ export default function AuthPage() {
           <div className={styles.page_content}>
             <h1 className={styles.page_title}>Pro Test</h1>
             <p className={styles.page_text}>
-              <b>[</b> We will help you find weak points <br /> in knowledge so
-              that you can strengthen it.
-              <br /> We will show you what is relevant to know <br />
-              for a <b>QA Engineer</b> and will try to make the <br />
-              learning process more diverse_ <b>]</b>
+              <span className={styles.bold_items}>[</span> We will help you find
+              weak points in knowledge so that you can strengthen it. We will
+              show you what is relevant to know for a{' '}
+              <span className={styles.bold_items}> QA Engineer</span> and will
+              try to make the learning process more diverse_{' '}
+              <span className={styles.bold_items}>]</span>
             </p>
           </div>
         </li>
@@ -66,6 +83,7 @@ export default function AuthPage() {
           />
         </li>
       </ul>
+      <ToastContainer autoClose={5000} position="bottom-right" />
     </div>
   );
 }
