@@ -1,11 +1,126 @@
+.contactsPage {
+  padding-top: 40px;
+  padding-bottom: 56px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 320px;
+  margin: auto;
+}
+
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  width: 280px;
+  height: 28px;
+
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.line {
+  width: 130px;
+  border-top: 1px solid #00122f;
+  opacity: 0.15;
+}
+
 .list {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .link {
   background: #ffffff;
-  width: 354px;
-  margin: 20px;
+  width: 280px;
+}
+
+@media screen and (max-width: 767px) {
+  .link:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contactsPage {
+    padding-top: 41px;
+    padding-bottom: 76px;
+    padding-left: 22px;
+    padding-right: 22px;
+    width: 768px;
+    margin: auto;
+  }
+
+  .mainBlock {
+    margin-bottom: 39px;
+  }
+
+  .title {
+    width: 650px;
+    height: 28px;
+    font-size: 22px;
+    line-height: 1.36;
+    margin-bottom: 22px;
+  }
+
+  .line {
+    width: 321.5px;
+    border-top: 1px solid #00122f;
+    opacity: 0.15;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: -10px;
+  }
+  .link {
+    width: calc((100% - 2 * 20px) / 2);
+    margin: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contactsPage {
+    padding-top: 40px;
+    padding-bottom: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 1280px;
+    margin: auto;
+  }
+
+  .mainBlock {
+    margin-bottom: 39px;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: -10px;
+  }
+  .link {
+    width: calc((100% - 4 * 20px) / 4);
+    margin: 10px;
+  }
 }

@@ -4,8 +4,16 @@ import s from './ContactPage.module.css';
 
 export default function ContactsPage() {
     return (
+<div className={s.contactsPage}>
+        <div className={s.mainBlock}>
+        <p className={s.title}>Our team</p>
+       <span className={s.line}></span>
+    
+            </div>
+            
+            
         <ul className={s.list}>
-            <div >
+            
             {developers.map(developer => (
                 <li className={s.link} key={developer.id}>
                     <Developer
@@ -14,12 +22,15 @@ export default function ContactsPage() {
                     photo={developer.url}
                     developerName={developer.developerName}
                     role={developer.role}
-    text={developer.text}
+                        text={developer.text}
+                        link={developer.link}
                 />
                 </li>
                 
             ))}
-                </div>
-        </ul>
+                
+                </ul>
+               
+            </div>
     )
 }

@@ -1,0 +1,88 @@
+.sections {
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.role {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .sections {
+    padding-top: 20.29px;
+    padding-bottom: 22px;
+    padding-left: 29px;
+    padding-right: 31px;
+  }
+
+  .name {
+    margin-bottom: 5.98px;
+    margin-top: 0;
+  }
+
+  .role {
+    margin-bottom: 9.8px;
+    margin-top: 0;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sections {
+    padding-top: 19.95px;
+    padding-bottom: 21.94px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  .name {
+    margin-bottom: 5.98px;
+  }
+
+  .role {
+    margin-bottom: 9.97px;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+}
