@@ -1,0 +1,33 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultHeading {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.36;
+}
+
+.testName {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+.horizontalLine {
+}
+
+.textResult {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.textResult p:first-child {
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #d0d4dd;
+}
