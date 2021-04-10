@@ -58,7 +58,7 @@ export default function UserMenu({ onClick }) {
       <span className={styles.userMenuName}>{name}</span>
 
       <div className={styles.logOutButton} onClick={onClick}>
-        <Link href="/auth" className={styles.LogOutBox}>
+        <Link to="/auth" className={styles.LogOutBox}>
           <img src={SignOutLogo} alt="SignOutLogo" height="16" width="16" />
         </Link>
       </div>
