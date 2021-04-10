@@ -25,9 +25,7 @@ function App() {
       <Statefull />
       <Suspense fallback={<h2>Loading...</h2>}>
         <Switch>
-
           <Route path="/auth" exact restricted>
-
             <AuthPage />
           </Route>
 
