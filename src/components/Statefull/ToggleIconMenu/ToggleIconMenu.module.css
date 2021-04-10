@@ -1,0 +1,22 @@
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 17px 0 19px;
+    max-width: 56px;
+}
+
+.toggleField {
+    height: 100%;
+    border-left: 1px solid #e2e3e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .toggleField {
+        display: none;
+    }
+}
