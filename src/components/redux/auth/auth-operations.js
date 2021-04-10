@@ -1,5 +1,8 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+
+import userErrorMessages from '../../AuthPage/Errors';
 
 axios.defaults.baseURL = 'https://??????.herokuapp.com';
 
@@ -18,6 +21,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
     token.set(data.token);
     return data;
   } catch (error) {
+    toast.error(userErrorMessages.ERROR_AUTHENTICATION);
     console.log('This is error registor', error);
     throw error;
   }
@@ -29,6 +33,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
     token.set(data.token);
     return data;
   } catch (error) {
+    toast.error(userErrorMessages.ERROR_AUTHENTICATION);
     console.log('This is login error', error);
     throw error();
   }

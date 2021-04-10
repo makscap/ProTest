@@ -23,7 +23,7 @@ const authSlice = createSlice({
       state.isRegisterError = true;
     },
     [authOperations.register.rejected](state) {
-      state.isRegisterError = 'Registration failed. Please try again.';
+      state.isRegisterError = false;
     },
     [authOperations.logIn.fulfilled](state, action) {
       state.user = action.payload.user;

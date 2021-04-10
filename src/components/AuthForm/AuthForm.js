@@ -1,6 +1,4 @@
 import GoogleAuth from '../GoogleAuth';
-import { useSelector } from 'react-redux';
-import authSelectors from '../redux/auth/auth-selectors';
 
 import styles from './AuthForm.module.css';
 
@@ -13,8 +11,6 @@ const AuthForm = props => {
     handleRegister,
     handleChange,
   } = props;
-
-  const error = useSelector(authSelectors.getErrorRegister);
 
   return (
     <div className={styles.Form_container}>
@@ -65,7 +61,6 @@ const AuthForm = props => {
             className={styles.input_item}
           />
         </label>
-        {error && <p className={styles.error_message}>{error}</p>}
         <div className={styles.button_container}>
           <button onClick={handleLogin} className={styles.button_reg}>
             Sign in
