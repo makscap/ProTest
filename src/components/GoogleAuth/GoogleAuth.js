@@ -1,11 +1,11 @@
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
 import styles from './GoogleAuth.module.css';
 
 const GoogleAuth = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleGoogleAuth = e => {
     e.preventDefault();

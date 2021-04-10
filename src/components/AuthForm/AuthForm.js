@@ -1,5 +1,4 @@
 import GoogleAuth from '../GoogleAuth';
-
 import styles from './AuthForm.module.css';
 
 const AuthForm = props => {
