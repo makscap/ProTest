@@ -1,5 +1,6 @@
 import React from 'react';
-import UsefulInfoItem from './UsefulInfoItem/UsefulInfoItem';
+import Resources from './UsefulInfoItem/Resources';
+import Literature from './UsefulInfoItem/Literature';
 import s from './Useful-info.module.css';
 
 function UsefulInfo({ literature, resources }) {
@@ -10,7 +11,7 @@ function UsefulInfo({ literature, resources }) {
         <ol className={s.usefulInfo}>
           {literature.map(({ id, name, url }) => (
             <li className={s.materials} key={id}>
-              <UsefulInfoItem id={id} name={name} url={url} />
+              <Literature id={id} name={name} url={url} />
             </li>
           ))}
         </ol>
@@ -20,7 +21,7 @@ function UsefulInfo({ literature, resources }) {
         <ol className={s.usefulInfo}>
           {resources.map(({ id, name, url }) => (
             <li className={s.materials} key={id}>
-              <UsefulInfoItem id={id} name={name} url={url} />
+              <Resources id={id} name={name} url={url} />
             </li>
           ))}
         </ol>
