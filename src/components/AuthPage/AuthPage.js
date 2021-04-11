@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
 
@@ -29,7 +29,6 @@ export default function AuthPage() {
 
   const handleRegister = e => {
     e.preventDefault();
-    warningMessage();
 
     dispatch(authOperations.register({ name, email, password }));
 
@@ -41,19 +40,11 @@ export default function AuthPage() {
 
   const handleLogin = e => {
     e.preventDefault();
-    warningMessage();
 
     dispatch(authOperations.logIn({ email, password }));
     setEmail('');
     setPassword('');
     console.log('Кликаем для авторизации пользователя');
-  };
-
-  const warningMessage = () => {
-    if (email.trim() === '' || password.trim === '') {
-      toast.error('Email and password fields are required');
-      return;
-    }
   };
 
   return (
