@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import Diagram from '../Diagram';
 import catImg from './img/cat.png';
 
@@ -7,7 +7,17 @@ import s from './ResultPage.module.css';
 
 export default function ResultPage() {
   const location = useLocation();
+  const history = useHistory();
   const { result, totalQuestions, testName } = location.state;
+
+  const tryAgain = () => {
+    history.push({
+      pathname: '/test',
+      state: {
+        testName,
+      },
+    });
+  };
 
   const raiting = () => {
     const percentValue = result / (totalQuestions / 100);
@@ -51,7 +61,9 @@ export default function ResultPage() {
         <p className={s.fullResult}>{raiting().full}</p>
       </div>
       <div>
-        <button className={s.tryAgain}>Try again</button>
+        <button className={s.tryAgain} onClick={tryAgain}>
+          Try again
+        </button>
       </div>
     </div>
   );
