@@ -1,12 +1,37 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Diagram from '../Diagram';
+import catImg from './img/cat.png';
 
 import s from './ResultPage.module.css';
 
 export default function ResultPage() {
   const location = useLocation();
   const { result, totalQuestions, testName } = location.state;
+
+  const raiting = () => {
+    const percentValue = result / (totalQuestions / 100);
+    if (percentValue <= 50) {
+      return {
+        short: 'Very bad!',
+        full: 'You need spend more time for learn materials.',
+      };
+    }
+
+    if (percentValue > 50 && percentValue <= 80) {
+      return {
+        short: 'Not bad!',
+        full: 'But you still need to learn some materials.',
+      };
+    }
+
+    if (percentValue > 80) {
+      return {
+        short: 'Excellent',
+        full: "You're awesome! Your result is very good.",
+      };
+    }
+  };
 
   return (
     <div className={s.result}>
@@ -20,7 +45,14 @@ export default function ResultPage() {
         <p>Correct answers - {result}</p>
         <p>Total questions - {totalQuestions}</p>
       </div>
-      <div className={s.other}>Other Information</div>
+      <div className={s.other}>
+        <img src={catImg} alt="cat" className={s.cat} />
+        <p className={s.shortResult}>{raiting().short}</p>
+        <p className={s.fullResult}>{raiting().full}</p>
+      </div>
+      <div>
+        <button className={s.tryAgain}>Try again</button>
+      </div>
     </div>
   );
 }
