@@ -2,72 +2,72 @@
     {
         "id": "id1",
         "developerName": "Maksym Borysov",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
         "link": "https://github.com/makscap"
 
 },
 {
         "id": "id2",
         "developerName": "Viktoriia Melanchenko",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
         "link": "https://github.com/VikMelanchenko"
 
 },
 {
         "id": "id3",
-        "developerName": "NAME",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
-        "link": "https://github.com/makscap"
+        "developerName": "Vadym Usov",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
+        "link": "https://github.com/vertraut"
 
 },
 {
         "id": "id4",
         "developerName": "Yulia Kovalenko",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
         "link": "https://github.com/kapustikk"
 
 },
 {
         "id": "id5",
         "developerName": "Taras Shcherbatenko",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
         "link": "https://github.com/stadvar"
 
 },
 {
         "id": "id6",
         "developerName": "Ivanna Melnyk",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
         "link": "https://github.com/IvannaMelnyk"
 
 },
 {
         "id": "id7",
-        "developerName": "NAME",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
-        "link": "https://github.com/makscap"
+        "developerName": "Andrey Kovsh",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
+        "link": "https://github.com/AndreyKovsh"
 
 },
 {
         "id": "id8",
         "developerName": "Andrey Mashko",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
         "link": "https://github.com/andreymashko7"
 
 },
 {
         "id": "id9",
         "developerName": "Aleksandr Sibirko",
-        "role": "Front-End Developer",
-        "text": "Lorem Ipsum has been the standard fish for Latin texts since the early 16th century.",
+        "role": "Full Stack JavaScript Developer",
+        "text": "Scills: HTML, CSS, SASS, React, Redux, Node.js, Mongodb, Postman... To view the portfolio click here",
         "link": "https://github.com/AlexandrSybirko"
 
 }
