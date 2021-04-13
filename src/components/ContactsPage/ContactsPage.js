@@ -6,7 +6,7 @@ export default function ContactsPage() {
     return (
 <div className={s.contactsPage}>
         <div className={s.mainBlock}>
-        <p className={s.title}>Our team</p>
+        <h1 className={s.title}>Our team</h1>
        <span className={s.line}></span>
     
             </div>

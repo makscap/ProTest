@@ -1,5 +1,4 @@
 
-// import { Link } from 'react-router-dom';
 import s from './Developers.module.css';
 import currentImages from '../Photo/index';
 
@@ -24,7 +23,7 @@ const Developer = ({
       </picture>                        
                
         <div className={s.sections}>
-          <h2 className={s.name}>{developerName}</h2>
+          <p className={s.name}>{developerName}</p>
           <p className={s.role}>{role}</p>
                       <p className={s.text}>{text}</p>
                     </div>
