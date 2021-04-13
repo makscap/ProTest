@@ -8,7 +8,7 @@ import AuthForm from '../AuthForm/AuthForm';
 import styles from './AuthPage.module.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function AuthPage() {
+export default function AuthPage({ token }) {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
