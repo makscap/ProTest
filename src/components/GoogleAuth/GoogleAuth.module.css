@@ -15,6 +15,8 @@
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.02em;
+  box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+  text-decoration: none;
 }
 
 .google_icon {

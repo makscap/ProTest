@@ -4,7 +4,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import userErrorMessages from '../../AuthPage/Errors';
 
-axios.defaults.baseURL = 'https://??????.herokuapp.com';
+axios.defaults.baseURL = 'http://protest-api.herokuapp.com';
 
 const token = {
   set(token) {
@@ -17,7 +17,7 @@ const token = {
 
 const register = createAsyncThunk('auth/register', async credentials => {
   try {
-    const { data } = await axios.post('/users/signup', credentials);
+    const { data } = await axios.post('/api/users/register', credentials);
     token.set(data.token);
     return data;
   } catch (error) {
@@ -29,7 +29,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
 
 const logIn = createAsyncThunk('auth/login', async credentials => {
   try {
-    const { data } = await axios.post('/users/login', credentials);
+    const { data } = await axios.post('/api/users/login', credentials);
     token.set(data.token);
     return data;
   } catch (error) {
