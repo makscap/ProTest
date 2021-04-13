@@ -12,6 +12,7 @@ import ResultPage from './components/ResultPage/ResultPage';
 import ContactsPage from './components/ContactsPage/ContactsPage';
 import Footer from './components/Footer/Footer';
 import AuthPage from './components/AuthPage';
+import Spiner from './components/Spiner/Spiner';
 
 import {
   literature,
@@ -36,7 +37,7 @@ function App() {
         userEmail=""
         handleSignOutBtnClick={handleSignOutBtnClick}
       />
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<Spiner />}>
         <Switch>
           <Route path="/auth" exact restricted>
             <AuthPage />
