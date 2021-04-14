@@ -51,14 +51,15 @@
 }
 
 .LogOutBox {
-    display: flex;
-    margin: 0 20px 0 21px;   
+    width: 56px;
+    height: 70px;
+    justify-content: center;
+    display: flex;    
+    border-left: 1px solid #e2e3e5;
 }
 
 .logOutButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     margin: 0px;
     padding: 0px;
     border: 0px;

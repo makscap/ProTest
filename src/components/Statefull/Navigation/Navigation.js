@@ -6,8 +6,7 @@ import AuthNav from '../AuthNav/AuthNav';
 const Navigation = ({ isLoggedIn }) => {
   return (
     <nav className={styles.navContainer}>
-      {isLoggedIn ? <AuthNav /> : <UserInfo />}
-      {/* {isLoggedIn ? <UserInfo /> : <AuthNav />} */}
+      {isLoggedIn ? <UserInfo /> : <AuthNav />}
     </nav>
   );
 };

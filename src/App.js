@@ -25,7 +25,6 @@ import PrivateRoute from './components/Routes/PrivatRoute';
 function App() {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
-
   const handleSignOutBtnClick = () => {
     dispatch(authOperations.logOut());
   };
@@ -34,7 +33,6 @@ function App() {
     <Container>
       <Statefull
         isLoggedIn={isLoggedIn}
-        userEmail=""
         handleSignOutBtnClick={handleSignOutBtnClick}
       />
       <Suspense fallback={<Spiner />}>
