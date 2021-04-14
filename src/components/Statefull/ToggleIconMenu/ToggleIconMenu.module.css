@@ -3,20 +3,27 @@
     justify-content: center;
     align-items: center;
     margin: 0 17px 0 19px;
-    max-width: 56px;
 }
 
 .toggleField {
-    height: 100%;
+    width: 56px;
+    height: 70px;
     border-left: 1px solid #e2e3e5;
     display: flex;
     justify-content: center;
     align-items: center;
-cursor: pointer;
+    cursor: pointer;
+}
+
+.avatarAbdButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
-    .toggleField {
+    .avatarAbdButton {
         display: none;
     }
 }

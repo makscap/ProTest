@@ -4,6 +4,8 @@ import { NavLink, Link } from 'react-router-dom';
 import styles from './UserInfo.module.css';
 import { Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import { useDispatch, useSelector } from 'react-redux';
+import { authOperations, authSelectors } from '../../redux/auth';
 
 const useStyles = makeStyles(theme => ({
   avatar: {
@@ -17,9 +19,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function UserMenu({ onClick }) {
-  // const dispatch = useDispatch();
-  const name = 'Group10';
+export default function UserMenu({ isLoggedIn }) {
+  const dispatch = useDispatch();
+  const name = useSelector(authSelectors.getUsername) || null;
   const classes = useStyles();
 
   return (
@@ -57,11 +59,13 @@ export default function UserMenu({ onClick }) {
 
       <span className={styles.userMenuName}>{name}</span>
 
-      <div className={styles.logOutButton} onClick={onClick}>
-        <Link to="/auth" className={styles.LogOutBox}>
-          <img src={SignOutLogo} alt="SignOutLogo" height="16" width="16" />
-        </Link>
-      </div>
+      <Link
+        to="/auth"
+        className={styles.LogOutBox}
+        onClick={() => dispatch(authOperations.logOut())}
+      >
+        <img src={SignOutLogo} alt="SignOutLogo" height="16" width="16" />
+      </Link>
     </div>
   );
 }

@@ -38,7 +38,11 @@ export default function AppBar() {
           closeBurgerMenu={closeBurgerMenu}
         />
       )}
-      <ToggleIconMenu isOpen={isOpen} onClick={handleIcon} />
+      <ToggleIconMenu
+        isOpen={isOpen}
+        isLoggedIn={isLoggedIn}
+        onClick={handleIcon}
+      />
     </header>
   );
 }
