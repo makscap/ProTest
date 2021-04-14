@@ -25,7 +25,6 @@ const AuthForm = props => {
           <input
             type="text"
             name="name"
-            required
             autoFocus
             value={name}
             autoComplete="off"
