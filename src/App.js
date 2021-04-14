@@ -19,7 +19,7 @@ import {
   resources,
 } from './components/UsefulInfo/Useful-info.json';
 
-// import PrivatRoute from './components/Routes/PrivatRoute';
+import PrivateRoute from './components/Routes/PrivatRoute';
 // import PublicRoute from './components/Routes/PublicRoute'; //restricted
 
 function App() {
@@ -47,9 +47,9 @@ function App() {
             <MainPage />
           </Route>
 
-          <Route path="/test">
+          <PrivateRoute path="/test">
             <TestPage />
-          </Route>
+          </PrivateRoute>
 
           <Route path="/materials">
             <UsefulInfo literature={literature} resources={resources} />
