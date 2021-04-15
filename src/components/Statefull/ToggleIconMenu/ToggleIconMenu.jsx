@@ -1,30 +1,33 @@
 import React from 'react';
 import styles from './ToggleIconMenu.module.css';
-import { Avatar } from '@material-ui/core';
+// import { Avatar } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
-import { makeStyles } from '@material-ui/styles';
+// import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles(theme => ({
-  avatar: {
-    backgroundColor: '#FFFFFF',
-    color: '#555555',
-    boxShadow: '0px 1px 1px rgba(18, 29, 46, 0.1)',
-    width: '30px',
-    height: '30px',
-    fontSize: '14px',
-    marginRight: '19px',
-  },
-}));
+// const useStyles = makeStyles(theme => ({
+//   avatar: {
+//     backgroundColor: '#FFFFFF',
+//     color: '#555555',
+//     boxShadow: '0px 1px 1px rgba(18, 29, 46, 0.1)',
+//     width: '30px',
+//     height: '30px',
+//     fontSize: '14px',
+//     marginRight: '19px',
+//   },
+// }));
 
 
 function ToggleIconMenu({ isOpen, onClick, isLoggedIn }) {
-  const name = useSelector(authSelectors.getUsername) || null;
-  const classes = useStyles();
+  const name = useSelector(authSelectors.getUsername) || 'Error';
+  // const classes = useStyles();
 
   return (
     <div className={styles.avatarAbdButton}>
-      {isLoggedIn && <Avatar className={classes.avatar}>{name[0]}</Avatar>}
+      {isLoggedIn
+        && <div className={styles.avatar}>
+        <span className={styles.avatarLabel}>{name[0]}</span>
+      </div>}
 
     <div >
       <div className={styles.toggleField} onClick={onClick}>
