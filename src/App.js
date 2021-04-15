@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSelectors, authOperations } from '../src/components/redux/auth';
@@ -29,6 +29,10 @@ function App() {
     dispatch(authOperations.logOut());
   };
 
+  // useEffect(() => {
+  //   dispatch(authOperations.fetchCurrentUser());
+  // }, [dispatch]);
+
   return (
     <Container>
       <Statefull
@@ -41,9 +45,9 @@ function App() {
             <AuthPage />
           </PublicRoute>
 
-          <PublicRoute path="/" exact>
+          <PrivateRoute path="/" exact>
             <MainPage />
-          </PublicRoute>
+          </PrivateRoute>
 
           <PrivateRoute path="/test">
             <TestPage />
