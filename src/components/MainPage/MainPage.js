@@ -17,6 +17,7 @@ export default function MainPage() {
         </div> 
 
         <div className={s.buttons}>
+            <div className={s.buttonDiv}>
         <Link 
         className={s.linkToTestPage}
         to={{
@@ -47,6 +48,7 @@ export default function MainPage() {
             <img src={arrow} alt="arrow" className={s.arrow} />
         </button>
         </Link>
+        </div>
         </div>
     </div>
     )
