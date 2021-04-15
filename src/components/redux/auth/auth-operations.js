@@ -8,6 +8,8 @@ axios.defaults.baseURL = 'http://protest-api.herokuapp.com';
 
 const token = {
   set(token) {
+    console.log('🚀 ~ file: auth-operations.js ~ line 11 ~ set ~ token', token);
+
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   },
   unset() {
@@ -30,7 +32,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
 const logIn = createAsyncThunk('auth/login', async credentials => {
   try {
     const { data } = await axios.post('/api/users/login', credentials);
-    token.set(data.token);
+    token.set(data.data.token);
     return data;
   } catch (error) {
     toast.error(userErrorMessages.ERROR_AUTHENTICATION);
