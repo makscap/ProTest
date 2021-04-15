@@ -8,16 +8,13 @@ import AuthForm from '../AuthForm/AuthForm';
 import styles from './AuthPage.module.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function AuthPage({ token }) {
+export default function AuthPage() {
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
-      case 'name':
-        return setName(value);
       case 'email':
         return setEmail(value);
       case 'password':
@@ -30,12 +27,10 @@ export default function AuthPage({ token }) {
   const handleRegister = e => {
     e.preventDefault();
 
-    dispatch(authOperations.register({ name, email, password }));
+    dispatch(authOperations.register({ email, password }));
 
-    setName('');
     setEmail('');
     setPassword('');
-    console.log('Кликаем для регистрации пользователя');
   };
 
   const handleLogin = e => {
@@ -44,7 +39,6 @@ export default function AuthPage({ token }) {
     dispatch(authOperations.logIn({ email, password }));
     setEmail('');
     setPassword('');
-    console.log('Кликаем для авторизации пользователя');
   };
 
   return (
@@ -65,7 +59,6 @@ export default function AuthPage({ token }) {
         </li>
         <li>
           <AuthForm
-            name={name}
             email={email}
             password={password}
             handleLogin={handleLogin}
