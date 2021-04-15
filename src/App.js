@@ -20,7 +20,7 @@ import {
 } from './components/UsefulInfo/Useful-info.json';
 
 import PrivateRoute from './components/Routes/PrivatRoute';
-// import PublicRoute from './components/Routes/PublicRoute'; //restricted
+import PublicRoute from './components/Routes/PublicRoute'; //restricted
 
 function App() {
   const dispatch = useDispatch();
@@ -37,29 +37,29 @@ function App() {
       />
       <Suspense fallback={<Spiner />}>
         <Switch>
-          <Route path="/auth" exact restricted>
+          <PublicRoute path="/auth" exact restricted>
             <AuthPage />
-          </Route>
+          </PublicRoute>
 
-          <Route path="/" exact>
+          <PublicRoute path="/" exact>
             <MainPage />
-          </Route>
+          </PublicRoute>
 
           <PrivateRoute path="/test">
             <TestPage />
           </PrivateRoute>
 
-          <Route path="/materials">
+          <PublicRoute path="/materials">
             <UsefulInfo literature={literature} resources={resources} />
-          </Route>
+          </PublicRoute>
 
-          <Route path="/contacts">
+          <PublicRoute path="/contacts">
             <ContactsPage />
-          </Route>
+          </PublicRoute>
 
-          <Route path="/results">
+          <PrivateRoute path="/results">
             <ResultPage />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Suspense>
       <Footer />

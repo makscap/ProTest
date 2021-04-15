@@ -39,6 +39,18 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
   }
 });
 
+const googleIn = createAsyncThunk('auth/google', async credentials => {
+  try {
+    const { data } = await axios.post('/api/users/google', credentials);
+    token.set(data.data.token);
+    return data.data;
+  } catch (error) {
+    toast.error(userErrorMessages.AUTH_FAILED);
+    console.log('This is login error', error);
+    throw error();
+  }
+});
+
 const logOut = createAsyncThunk('auth/logout', async () => {
   try {
     await axios.post('/api/users/logout');
@@ -74,5 +86,6 @@ const operations = {
   logOut,
   logIn,
   fetchCurrentUser,
+  googleIn,
 };
 export default operations;
