@@ -2,14 +2,7 @@ import GoogleAuth from '../GoogleAuth';
 import styles from './AuthForm.module.css';
 
 const AuthForm = props => {
-  const {
-    name,
-    email,
-    password,
-    handleLogin,
-    handleRegister,
-    handleChange,
-  } = props;
+  const { email, password, handleLogin, handleRegister, handleChange } = props;
 
   return (
     <div className={styles.Form_container}>
@@ -21,18 +14,6 @@ const AuthForm = props => {
         <p className={styles.header}>
           Or login to our app using e-mail and password:
         </p>
-        <label>
-          <input
-            type="text"
-            name="name"
-            autoFocus
-            value={name}
-            autoComplete="off"
-            placeholder="Name"
-            onChange={handleChange}
-            className={styles.input_item}
-          />
-        </label>
         <label>
           <input
             type="text"
