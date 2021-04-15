@@ -2,27 +2,27 @@
 import SignOutLogo from '../../../images/sign-out.svg';
 import { NavLink, Link } from 'react-router-dom';
 import styles from './UserInfo.module.css';
-import { Avatar } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+// import { Avatar } from '@material-ui/core';
+// import { makeStyles } from '@material-ui/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { authOperations, authSelectors } from '../../redux/auth';
 
-const useStyles = makeStyles(theme => ({
-  avatar: {
-    backgroundColor: '#FFFFFF',
-    color: '#555555',
-    boxShadow: '0px 1px 1px rgba(18, 29, 46, 0.1)',
-    width: '30px',
-    height: '30px',
-    fontSize: '14px',
-    marginRight: '6px',
-  },
-}));
+// const useStyles = makeStyles(theme => ({
+//   avatar: {
+//     backgroundColor: '#FFFFFF',
+//     color: '#555555',
+//     boxShadow: '0px 1px 1px rgba(18, 29, 46, 0.1)',
+//     width: '30px',
+//     height: '30px',
+//     fontSize: '14px',
+//     marginRight: '6px',
+//   },
+// }));
 
-export default function UserMenu({ isLoggedIn }) {
+export default function UserMenu() {
   const dispatch = useDispatch();
-  const name = useSelector(authSelectors.getUsername) || null;
-  const classes = useStyles();
+  const name = useSelector(authSelectors.getUsername) || 'Error';
+  // const classes = useStyles();
 
   return (
     <div className={styles.userMenuContainer}>
@@ -55,7 +55,10 @@ export default function UserMenu({ isLoggedIn }) {
         </NavLink>
       </div>
 
-      <Avatar className={classes.avatar}>{name[0]}</Avatar>
+      <div className={styles.avatar}>
+        <span className={styles.avatarLabel}>{name[0]}</span>
+      </div>
+      {/* <Avatar className={classes.avatar}>{name[0]}</Avatar> */}
 
       <span className={styles.userMenuName}>{name}</span>
 
