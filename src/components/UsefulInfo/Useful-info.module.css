@@ -1,10 +1,12 @@
 .section {
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  height: 100%;
+  margin: 0 auto;
 }
 @media screen and (max-width: 767px) {
   .section {
@@ -48,7 +50,6 @@ h2 {
   letter-spacing: 0.02em;
 }
 a.linkResource {
-  text-decoration: none;
   color: #000000;
 }
 a.linkResource:active,
@@ -83,7 +84,7 @@ a.linkLiterature:hover {
 }
 .resources {
   margin-top: 22px;
-  padding-bottom: 111px;
+  padding-bottom: 416px;
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
   h2 {
