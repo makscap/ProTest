@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSelectors, authOperations } from '../src/components/redux/auth';
@@ -20,7 +20,7 @@ import {
 } from './components/UsefulInfo/Useful-info.json';
 
 import PrivateRoute from './components/Routes/PrivatRoute';
-// import PublicRoute from './components/Routes/PublicRoute'; //restricted
+import PublicRoute from './components/Routes/PublicRoute'; //restricted
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +28,10 @@ function App() {
   const handleSignOutBtnClick = () => {
     dispatch(authOperations.logOut());
   };
+
+  // useEffect(() => {
+  //   dispatch(authOperations.fetchCurrentUser());
+  // }, [dispatch]);
 
   return (
     <Container>
@@ -37,29 +41,29 @@ function App() {
       />
       <Suspense fallback={<Spiner />}>
         <Switch>
-          <Route path="/auth" exact restricted>
+          <PublicRoute path="/auth" exact restricted>
             <AuthPage />
-          </Route>
+          </PublicRoute>
 
-          <Route path="/" exact>
+          <PublicRoute path="/" exact>
             <MainPage />
-          </Route>
+          </PublicRoute>
 
           <PrivateRoute path="/test">
             <TestPage />
           </PrivateRoute>
 
-          <Route path="/materials">
+          <PrivateRoute path="/materials">
             <UsefulInfo literature={literature} resources={resources} />
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/contacts">
+          <PublicRoute path="/contacts">
             <ContactsPage />
-          </Route>
+          </PublicRoute>
 
-          <Route path="/results">
+          <PrivateRoute path="/results">
             <ResultPage />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Suspense>
       <Footer />
