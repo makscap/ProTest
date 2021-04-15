@@ -102,11 +102,21 @@ background-color: #FF6B01;
   transform: scale(1);
 }
 
+.buttonDiv:hover .buttonFirst {
+    background-color: #ff6b01;
+    transform: scale(1);
+}
+
+.buttonDiv:hover .buttonSecond {
+    background-color: #02172a;
+  transform: scale(1);
+}
+
 .buttonText {
     width: 250px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -169,3 +179,7 @@ background-color: #FF6B01;
     }
 }
 
+.arrow {
+margin-right: auto;
+margin-left: auto;
+}
