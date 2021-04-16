@@ -1,9 +1,18 @@
 .footer {
+  position: absolute;
+  bottom: auto;
   display: flex;
   justify-content: center;
   width: 100vw;
   height: 56px;
   background-color: rgba(2, 23, 42, 1);
+}
+
+@media screen and (min-width: 1440px){
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .footerInfo {

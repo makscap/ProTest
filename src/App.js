@@ -60,9 +60,10 @@ function App() {
               <ContactsPage />
             </PublicRoute>
 
-            <PrivateRoute path="/results">
-              <ResultPage />
-            </PrivateRoute>
+          <PrivateRoute path="/results">
+            <ResultPage />
+          </PrivateRoute>
+        
           </Switch>
         </Suspense>
       )}

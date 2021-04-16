@@ -50,6 +50,10 @@
         padding-bottom: 122px;
     }
 
+    .buttonDiv {
+       text-align: center;
+       display: flex;
+    }
 
 @media screen and (max-width: 768px){
    .buttons {
@@ -120,6 +124,11 @@ background-color: #FF6B01;
 }
 
 @media screen and (max-width: 768px) {
+    .buttonDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
     .buttonFirst {
         margin-right: 0;
         margin-bottom: 30px;
@@ -153,6 +162,11 @@ background-color: #FF6B01;
        flex-direction: column;
         margin-top: 40px;
         padding-bottom: 30px;
+    }
+
+    .buttonDiv {
+        display: flex;
+        flex-direction: column;
     }
 
     .quotation {
