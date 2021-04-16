@@ -20,9 +20,9 @@ const token = {
 const register = createAsyncThunk('auth/register', async credentials => {
   try {
     const { data } = await axios.post('/api/users/register', credentials);
-    token.set(data.token);
+    token.set(data.data.token);
     console.log(data.token);
-    return data;
+    return data.data;
   } catch (error) {
     toast.error(userErrorMessages.ERROR_REGISTRATION);
     console.log('This is error registor', error);
@@ -47,7 +47,7 @@ const googleIn = createAsyncThunk('auth/google', async credentials => {
     const { data } = await axios.post('/api/users/google', credentials);
     token.set(data.data.token);
     // console.log(data.data);
-    return data;
+    return data.data;
   } catch (error) {
     // toast.error(userErrorMessages.AUTH_FAILED);
     console.log('This is login error', error);

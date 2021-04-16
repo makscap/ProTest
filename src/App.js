@@ -28,9 +28,9 @@ function App() {
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
-  // useEffect(() => {
-  //   dispatch(authOperations.fetchCurrentUser());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, [dispatch]);
 
   return (
     <Container>
