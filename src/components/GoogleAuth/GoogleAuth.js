@@ -17,10 +17,10 @@ export default function GoogleAuth() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
   const handleLogin = async googleData => {
-    const user = googleData?.profileObj;
+    // const user = googleData?.profileObj;
     const token = googleData?.tokenId;
     try {
-      dispatch(authOperations.googleIn({ user, token }));
+      dispatch(authOperations.googleIn({ token }));
       if (!isLoggedIn) {
         history.push('/auth');
       }

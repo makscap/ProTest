@@ -34,7 +34,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
   try {
     const { data } = await axios.post('/api/users/login', credentials);
     token.set(data.data.token);
-    return data;
+    return data.data;
   } catch (error) {
     toast.error(userErrorMessages.ERROR_LOGIN);
     console.log('This is login error', error);
@@ -46,7 +46,6 @@ const googleIn = createAsyncThunk('auth/google', async credentials => {
   try {
     const { data } = await axios.post('/api/users/google', credentials);
     token.set(data.data.token);
-    console.log(data.data.token);
     console.log(data.data);
     return data.data;
   } catch (error) {
@@ -78,7 +77,8 @@ const fetchCurrentUser = createAsyncThunk(
 
     token.set(persistedToken);
     try {
-      const { data } = await axios.get('/users/current');
+      const { data } = await axios.get('/api/users/current');
+      console.log('CURRENT TOKEN', data);
       return data;
     } catch (error) {
       console.log(error);
