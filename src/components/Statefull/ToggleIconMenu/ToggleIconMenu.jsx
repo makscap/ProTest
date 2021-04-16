@@ -5,12 +5,13 @@ import { authSelectors } from '../../redux/auth';
 
 function ToggleIconMenu({ isOpen, onClick, isLoggedIn }) {
   const name = useSelector(authSelectors.getUserEmail) || 'Error';
+  const nameLetter = name[0].toUpperCase();
 
   return (
     <div className={styles.avatarAbdButton}>
       {isLoggedIn
         && <div className={styles.avatar}>
-        <span className={styles.avatarLabel}>{name[0]}</span>
+        <span className={styles.avatarLabel}>{nameLetter}</span>
       </div>}
 
     <div >
