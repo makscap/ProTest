@@ -52,6 +52,7 @@
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
+  transform: scale(1.1);
 }
 
 .button_reg {
@@ -71,6 +72,7 @@
   line-height: 12px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  cursor: pointer;
 
   box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
 
@@ -99,6 +101,7 @@
   line-height: 12px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  cursor: pointer;
 
   box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
 
@@ -115,6 +118,16 @@
   align-items: center;
   text-align: center;
   justify-content: space-between;
+}
+
+.button_container:hover .button_reg {
+  background: #ffffff;
+  color: #ff6b09;
+}
+
+.button_container:hover .button_auth {
+  background: #ff6b09;
+  color: #ffffff;
 }
 
 /* SCREEN TABLET */

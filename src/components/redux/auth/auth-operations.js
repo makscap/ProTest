@@ -79,7 +79,7 @@ const fetchCurrentUser = createAsyncThunk(
     try {
       const { data } = await axios.get('/api/users/current');
       console.log('CURRENT TOKEN', data);
-      return data;
+      return data.data;
     } catch (error) {
       console.log(error);
     }
