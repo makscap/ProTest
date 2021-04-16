@@ -59,6 +59,7 @@ function App() {
           <PrivateRoute path="/results">
             <ResultPage />
           </PrivateRoute>
+          
         </Switch>
       </Suspense>
       <Footer />
