@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 
 import { GoogleLogin } from 'react-google-login';
-// import { FcGoogle } from 'react-icons/fc';
+import { FcGoogle } from 'react-icons/fc';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -20,18 +20,6 @@ export default function GoogleAuth() {
     const user = googleData?.profileObj;
     const token = googleData?.tokenId;
     try {
-      // const response = await fetch(
-      //   'https://protest-api.herokuapp.com/api/users/google',
-      //   {
-      //     method: 'POST',
-      //     body: JSON.stringify({
-      //       token: googleData.tokenId,
-      //     }),
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //     },
-      //   },
-      // );
       dispatch(authOperations.googleIn({ user, token }));
       if (!isLoggedIn) {
         history.push('/auth');
@@ -45,11 +33,23 @@ export default function GoogleAuth() {
     <>
       <GoogleLogin
         clientId="814991395296-bn2u0ikjh0g5rkph9aqc8e58d5bnmelj.apps.googleusercontent.com"
-        buttonText="Google"
+        render={renderProps => (
+          <div
+            className={styles.button__google}
+            onClick={renderProps.onClick}
+            disabled={renderProps.disabled}
+            variant="contained"
+          >
+            <div className={styles.google_container}>
+              <FcGoogle className={styles.google_icon} />
+              Google
+            </div>
+          </div>
+        )}
         onSuccess={handleLogin}
         onFailure={handleLogin}
-        cookiePolicy={'single_host_origin'}
         className={styles.button__google}
+        cookiePolicy={'single_host_origin'}
       />
 
       <AuthContext.Provider

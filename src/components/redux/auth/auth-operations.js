@@ -21,9 +21,10 @@ const register = createAsyncThunk('auth/register', async credentials => {
   try {
     const { data } = await axios.post('/api/users/register', credentials);
     token.set(data.token);
+    console.log(data.token);
     return data;
   } catch (error) {
-    toast.error(userErrorMessages.ERROR_AUTHENTICATION);
+    toast.error(userErrorMessages.ERROR_REGISTRATION);
     console.log('This is error registor', error);
     throw error;
   }
@@ -35,7 +36,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
     token.set(data.data.token);
     return data;
   } catch (error) {
-    toast.error(userErrorMessages.ERROR_AUTHENTICATION);
+    toast.error(userErrorMessages.ERROR_LOGIN);
     console.log('This is login error', error);
     throw error();
   }
@@ -45,6 +46,8 @@ const googleIn = createAsyncThunk('auth/google', async credentials => {
   try {
     const { data } = await axios.post('/api/users/google', credentials);
     token.set(data.data.token);
+    console.log(data.data.token);
+    console.log(data.data);
     return data.data;
   } catch (error) {
     toast.error(userErrorMessages.AUTH_FAILED);
