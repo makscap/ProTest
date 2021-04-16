@@ -1,3 +1,6 @@
+import axios from 'axios';
+import Spiner from '../Spiner/Spiner.js';
+
 import { useLocation, useHistory } from 'react-router-dom';
 
 import { useState } from 'react';
@@ -11,7 +14,9 @@ import technicalTest from './util/technicalTest.json';
 export default function TestPage() {
   const history = useHistory();
   const location = useLocation();
+
   const [testNumber, setTestNumber] = useState(0);
+  const [allQuestion, setAllQuestion] = useState(null);
   const [userСhoice, setUserСhoice] = useState({});
   const [result, setResult] = useState({});
 
@@ -36,6 +41,27 @@ export default function TestPage() {
     });
   };
 
+  if (
+    location.state.testName === 'QA technical training' &&
+    allQuestion === null
+  ) {
+    axios
+      .get('/qa-test/tech')
+      .then(data => data.data.data.techQuestions)
+      .then(setAllQuestion);
+  }
+
+  if (location.state.testName === 'Testing theory' && allQuestion === null) {
+    axios
+      .get('/qa-test/theory')
+      .then(data => data.data.data.theoryQuestions)
+      .then(setAllQuestion);
+  }
+
+  if (allQuestion === null) {
+    return <Spiner />;
+  }
+
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
@@ -44,9 +70,9 @@ export default function TestPage() {
       </div>
       <div>
         <Test
-          question={technicalTest[testNumber]}
+          question={allQuestion[testNumber]}
           testNumber={testNumber}
-          testLength={technicalTest.length}
+          testLength={allQuestion.length}
           userСhoice={userСhoice}
           setUserСhoice={setUserСhoice}
           setResult={updateResult}
@@ -55,7 +81,7 @@ export default function TestPage() {
       <div>
         <BtnsAction
           updateNumber={setTestNumber}
-          testLength={technicalTest.length}
+          testLength={allQuestion.length}
           numberQuestion={testNumber}
         />
       </div>
