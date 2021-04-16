@@ -46,8 +46,8 @@ const googleIn = createAsyncThunk('auth/google', async credentials => {
   try {
     const { data } = await axios.post('/api/users/google', credentials);
     token.set(data.data.token);
-    console.log(data.data);
-    return data.data;
+    // console.log(data.data);
+    return data;
   } catch (error) {
     // toast.error(userErrorMessages.AUTH_FAILED);
     console.log('This is login error', error);
