@@ -25,6 +25,7 @@ import PublicRoute from './components/Routes/PublicRoute'; //restricted
 function App() {
   const dispatch = useDispatch();
 
+  const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
   useEffect(() => {
@@ -34,34 +35,38 @@ function App() {
   return (
     <Container>
       <Statefull isLoggedIn={isLoggedIn} />
-      <Suspense fallback={<Spiner />}>
-        <Switch>
-          <PublicRoute path="/auth" exact restricted>
-            <AuthPage />
-          </PublicRoute>
+      {isFetchingCurrentUser ? (
+        <Spiner />
+      ) : (
+        <Suspense>
+          <Switch>
+            <PublicRoute path="/auth" exact restricted>
+              <AuthPage />
+            </PublicRoute>
 
-          <PrivateRoute path="/" exact>
-            <MainPage />
-          </PrivateRoute>
+            <PrivateRoute path="/" exact>
+              <MainPage />
+            </PrivateRoute>
 
-          <PrivateRoute path="/test">
-            <TestPage />
-          </PrivateRoute>
+            <PrivateRoute path="/test">
+              <TestPage />
+            </PrivateRoute>
 
-          <PublicRoute path="/materials">
-            <UsefulInfo literature={literature} resources={resources} />
-          </PublicRoute>
+            <PublicRoute path="/materials">
+              <UsefulInfo literature={literature} resources={resources} />
+            </PublicRoute>
 
-          <PublicRoute path="/contacts">
-            <ContactsPage />
-          </PublicRoute>
+            <PublicRoute path="/contacts">
+              <ContactsPage />
+            </PublicRoute>
 
           <PrivateRoute path="/results">
             <ResultPage />
           </PrivateRoute>
-          
-        </Switch>
-      </Suspense>
+        
+          </Switch>
+        </Suspense>
+      )}
       <Footer />
     </Container>
   );

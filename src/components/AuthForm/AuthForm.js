@@ -33,7 +33,7 @@ const AuthForm = props => {
             name="password"
             value={password}
             required
-            autoFocus
+            // autoFocus
             autoComplete="off"
             placeholder="Password"
             onChange={handleChange}

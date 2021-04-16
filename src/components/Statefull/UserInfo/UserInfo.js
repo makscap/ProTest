@@ -19,7 +19,7 @@ export default function UserMenu() {
           className={styles.userLink}
           activeClassName={styles.userLinkActive}
         >
-          Главная
+          Home
         </NavLink>
 
         <NavLink
@@ -28,7 +28,7 @@ export default function UserMenu() {
           className={styles.userLink}
           activeClassName={styles.userLinkActive}
         >
-          Полезные материалы
+          Materials
         </NavLink>
 
         <NavLink
@@ -37,7 +37,7 @@ export default function UserMenu() {
           className={styles.userLink}
           activeClassName={styles.userLinkActive}
         >
-          Контакты
+          Contacts
         </NavLink>
       </div>
 
