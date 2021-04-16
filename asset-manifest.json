@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/protest-frontend/static/css/main.ff6c2a36.chunk.css",
+    "main.js": "/protest-frontend/static/js/main.ccfb189d.chunk.js",
+    "main.js.map": "/protest-frontend/static/js/main.ccfb189d.chunk.js.map",
+    "runtime-main.js": "/protest-frontend/static/js/runtime-main.6717d369.js",
+    "runtime-main.js.map": "/protest-frontend/static/js/runtime-main.6717d369.js.map",
+    "static/css/2.e5f79bc2.chunk.css": "/protest-frontend/static/css/2.e5f79bc2.chunk.css",
+    "static/js/2.ef39eb97.chunk.js": "/protest-frontend/static/js/2.ef39eb97.chunk.js",
+    "static/js/2.ef39eb97.chunk.js.map": "/protest-frontend/static/js/2.ef39eb97.chunk.js.map",
+    "index.html": "/protest-frontend/index.html",
+    "static/css/2.e5f79bc2.chunk.css.map": "/protest-frontend/static/css/2.e5f79bc2.chunk.css.map",
+    "static/css/main.ff6c2a36.chunk.css.map": "/protest-frontend/static/css/main.ff6c2a36.chunk.css.map",
+    "static/js/2.ef39eb97.chunk.js.LICENSE.txt": "/protest-frontend/static/js/2.ef39eb97.chunk.js.LICENSE.txt",
+    "static/media/AndriyK280.b4f949b7.jpg": "/protest-frontend/static/media/AndriyK280.b4f949b7.jpg",
+    "static/media/AndriyK295.6e80da32.jpg": "/protest-frontend/static/media/AndriyK295.6e80da32.jpg",
+    "static/media/AndriyK352.0d31f6dc.jpg": "/protest-frontend/static/media/AndriyK352.0d31f6dc.jpg",
+    "static/media/AndriyM280.bd6b55e0.jpg": "/protest-frontend/static/media/AndriyM280.bd6b55e0.jpg",
+    "static/media/AndriyM295.89387474.jpg": "/protest-frontend/static/media/AndriyM295.89387474.jpg",
+    "static/media/AndriyM352.7344e645.jpg": "/protest-frontend/static/media/AndriyM352.7344e645.jpg",
+    "static/media/MaksymB280.14e4c97a.jpg": "/protest-frontend/static/media/MaksymB280.14e4c97a.jpg",
+    "static/media/MaksymB295.4e4202b7.jpg": "/protest-frontend/static/media/MaksymB295.4e4202b7.jpg",
+    "static/media/MaksymB352.420a0bdf.jpg": "/protest-frontend/static/media/MaksymB352.420a0bdf.jpg",
+    "static/media/Taras280.9253b794.jpg": "/protest-frontend/static/media/Taras280.9253b794.jpg",
+    "static/media/Taras295.f920f39c.jpg": "/protest-frontend/static/media/Taras295.f920f39c.jpg",
+    "static/media/Taras352.331acfe1.jpg": "/protest-frontend/static/media/Taras352.331acfe1.jpg",
+    "static/media/arrow.1bf824b7.svg": "/protest-frontend/static/media/arrow.1bf824b7.svg",
+    "static/media/arrow.e4763891.svg": "/protest-frontend/static/media/arrow.e4763891.svg",
+    "static/media/cat.dd6b37c4.png": "/protest-frontend/static/media/cat.dd6b37c4.png",
+    "static/media/copyright.8c7a2b78.svg": "/protest-frontend/static/media/copyright.8c7a2b78.svg",
+    "static/media/Useful-info.module.css": "/protest-frontend/static/media/fond-768.b41fd451.jpg",
+    "static/media/heart.393fbfe0.svg": "/protest-frontend/static/media/heart.393fbfe0.svg",
+    "static/media/sign-out.3c1065ce.svg": "/protest-frontend/static/media/sign-out.3c1065ce.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6717d369.js",
+    "static/css/2.e5f79bc2.chunk.css",
+    "static/js/2.ef39eb97.chunk.js",
+    "static/css/main.ff6c2a36.chunk.css",
+    "static/js/main.ccfb189d.chunk.js"
+  ]
+}
