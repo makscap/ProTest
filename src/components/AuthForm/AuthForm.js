@@ -6,45 +6,46 @@ const AuthForm = props => {
 
   return (
     <div className={styles.Form_container}>
-      <form className={styles.form}>
+      <form>
         <p className={styles.header}>
           You can use your Google Account to authorize:
         </p>
-        <GoogleAuth className={styles.btn_google} />
+        <GoogleAuth />
         <p className={styles.header}>
           Or login to our app using e-mail and password:
         </p>
-        <label>
+        <label className={styles.form_label}>
           <input
             type="text"
             name="email"
             required
-            autoFocus
             value={email}
             autoComplete="off"
-            placeholder="E-mail"
             onChange={handleChange}
             className={styles.input_item}
           />
+          <span className={styles.plaseholder}>E-mail*</span>
         </label>
-        <label>
+        <label className={styles.form_label}>
           <input
             type="password"
             name="password"
             value={password}
             required
-            // autoFocus
             autoComplete="off"
-            placeholder="Password"
             onChange={handleChange}
             className={styles.input_item}
           />
+          <span className={styles.plaseholder}>Password*</span>
         </label>
+        <span className={styles.warning_message}>
+          *This field cannot be empty
+        </span>
         <div className={styles.button_container}>
-          <button onClick={handleLogin} className={styles.button_reg}>
+          <button onClick={handleLogin} className={styles.button}>
             Sign in
           </button>
-          <button onClick={handleRegister} className={styles.button_auth}>
+          <button onClick={handleRegister} className={styles.button}>
             Sign Up
           </button>
         </div>

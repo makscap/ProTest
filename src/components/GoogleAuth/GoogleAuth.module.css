@@ -1,29 +1,31 @@
+/* SCREEN MOBILE */
+
 .button__google {
-  width: 159px;
-  height: 61px;
+  width: 103px;
+  height: 50px;
   display: block;
   border: none;
-  padding: 20px;
+  padding: 18px;
 
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #fafafa;
   color: #000;
 
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.02em;
-  box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+  box-shadow: 0px 5px 10px rgba(1, 20, 42, 0.5);
   text-decoration: none;
   cursor: pointer;
 }
 
 .google_icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
 }
 
 .google_container {
@@ -31,4 +33,35 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.button__google:hover {
+  background-color: #eeeeee;
+}
+/* SCREEN TABLET/ DESKTOP */
+
+@media screen and (min-width: 768px) {
+  .button__google {
+    width: 159px;
+    height: 61px;
+    padding: 22px;
+
+    margin-top: 30px;
+    box-shadow: 0px 5px 10px rgba(1, 20, 42, 0.5);
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .google_icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  .google_container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
