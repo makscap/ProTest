@@ -21,29 +21,38 @@ export default function TestPage() {
 
   const showResult = async () => {
     const userAnswers = [];
+
     for (const questionId in userСhoice) {
       userAnswers.push({
-        questionId: questionId,
+        questionId: Number(questionId),
         answer: userСhoice[questionId],
       });
     }
 
-    // const answersObject = {
-    //   answers: userAnswers,
-    // };
+    const answersObject = {
+      answers: userAnswers,
+    };
 
-    // const result = await axios
-    //   .get('/qa-test/tech-results')
-    //   .then(data => console.log);
+    const url =
+      location.state.testName === 'QA technical training'
+        ? '/qa-test/tech-results'
+        : '/qa-test/theory-results';
 
-    // history.push({
-    //   pathname: '/results',
-    //   state: {
-    //     testName: location.state.testName,
-    //     result: result,
-    //     totalQuestions: technicalTest.length,
-    //   },
-    // });
+    console.log(url);
+
+    console.log(answersObject);
+
+    const result = await axios.post(url, answersObject);
+    console.log(result.data.data);
+
+    history.push({
+      pathname: '/results',
+      state: {
+        testName: location.state.testName,
+        result: result.data.data,
+        totalQuestions: technicalTest.length,
+      },
+    });
   };
 
   if (
@@ -66,8 +75,6 @@ export default function TestPage() {
   if (allQuestion === null) {
     return <Spiner />;
   }
-
-  console.log(allQuestion);
 
   return (
     <div className={s.wrapper}>
