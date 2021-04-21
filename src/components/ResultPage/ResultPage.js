@@ -11,6 +11,7 @@ export default function ResultPage() {
 
   if (location.state) {
     const { result, totalQuestions, testName } = location.state;
+
     const tryAgain = () => {
       history.push({
         pathname: '/test',
@@ -21,7 +22,7 @@ export default function ResultPage() {
     };
 
     const raiting = () => {
-      const percentValue = result / (totalQuestions / 100);
+      const percentValue = result.rightAnswers / (totalQuestions / 100);
       if (percentValue <= 50) {
         return {
           short: 'Very bad!',
@@ -50,10 +51,13 @@ export default function ResultPage() {
         <p className={s.testName}>[ {testName}_]</p>
         <div className={s.horizontalLine}></div>
         <div className={s.diagram}>
-          <Diagram rightAnswer={result} totalQuestions={totalQuestions} />
+          <Diagram
+            rightAnswer={result.rightAnswers}
+            totalQuestions={totalQuestions}
+          />
         </div>
         <div className={s.textResult}>
-          <p>Correct answers - {result}</p>
+          <p>Correct answers - {result.rightAnswers}</p>
           <p>Total questions - {totalQuestions}</p>
         </div>
         <div className={s.other}>

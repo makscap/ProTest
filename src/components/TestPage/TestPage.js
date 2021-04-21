@@ -18,24 +18,38 @@ export default function TestPage() {
   const [testNumber, setTestNumber] = useState(0);
   const [allQuestion, setAllQuestion] = useState(null);
   const [userСhoice, setUserСhoice] = useState({});
-  const [result, setResult] = useState({});
 
-  const updateResult = item => {
-    setResult({
-      ...result,
-      ...item,
-    });
-  };
+  const showResult = async () => {
+    const userAnswers = [];
 
-  const showResult = () => {
-    const resultArray = Object.values(result);
+    for (const questionId in userСhoice) {
+      userAnswers.push({
+        questionId: Number(questionId),
+        answer: userСhoice[questionId],
+      });
+    }
 
-    const totalResult = resultArray.reduce((acc, item) => acc + item, 0);
+    const answersObject = {
+      answers: userAnswers,
+    };
+
+    const url =
+      location.state.testName === 'QA technical training'
+        ? '/qa-test/tech-results'
+        : '/qa-test/theory-results';
+
+    console.log(url);
+
+    console.log(answersObject);
+
+    const result = await axios.post(url, answersObject);
+    console.log(result.data.data);
+
     history.push({
       pathname: '/results',
       state: {
         testName: location.state.testName,
-        result: totalResult,
+        result: result.data.data,
         totalQuestions: technicalTest.length,
       },
     });
@@ -75,7 +89,6 @@ export default function TestPage() {
           testLength={allQuestion.length}
           userСhoice={userСhoice}
           setUserСhoice={setUserСhoice}
-          setResult={updateResult}
         />
       </div>
       <div>

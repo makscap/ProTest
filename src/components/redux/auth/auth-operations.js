@@ -8,7 +8,7 @@ axios.defaults.baseURL = 'http://protest-api.herokuapp.com';
 
 const token = {
   set(token) {
-    console.log('🚀 ~ file: auth-operations.js ~ line 11 ~ set ~ token', token);
+    // console.log('🚀 ~ file: auth-operations.js ~ line 11 ~ set ~ token', token);
 
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   },
