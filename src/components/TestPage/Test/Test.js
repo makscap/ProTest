@@ -6,14 +6,11 @@ export default function Test({
   testLength,
   userСhoice,
   setUserСhoice,
-  setResult,
 }) {
-  const { question: textQuestion, answers, rightAnswer } = question;
+  const { question: textQuestion, answers, questionId } = question;
 
   const addAnswer = e => {
-    const userAnswer = e.target.value;
-    setResult({ [testNumber]: userAnswer === rightAnswer ? 1 : 0 });
-    setUserСhoice({ ...userСhoice, [testNumber]: e.target.value });
+    setUserСhoice({ ...userСhoice, [questionId]: e.target.value });
   };
 
   return (
@@ -32,7 +29,7 @@ export default function Test({
               name="answer"
               value={item}
               onChange={addAnswer}
-              checked={userСhoice[testNumber] === item}
+              checked={userСhoice[questionId] === item}
               className={s.input}
             />
 

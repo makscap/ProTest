@@ -18,27 +18,32 @@ export default function TestPage() {
   const [testNumber, setTestNumber] = useState(0);
   const [allQuestion, setAllQuestion] = useState(null);
   const [userСhoice, setUserСhoice] = useState({});
-  const [result, setResult] = useState({});
 
-  const updateResult = item => {
-    setResult({
-      ...result,
-      ...item,
-    });
-  };
+  const showResult = async () => {
+    const userAnswers = [];
+    for (const questionId in userСhoice) {
+      userAnswers.push({
+        questionId: questionId,
+        answer: userСhoice[questionId],
+      });
+    }
 
-  const showResult = () => {
-    const resultArray = Object.values(result);
+    // const answersObject = {
+    //   answers: userAnswers,
+    // };
 
-    const totalResult = resultArray.reduce((acc, item) => acc + item, 0);
-    history.push({
-      pathname: '/results',
-      state: {
-        testName: location.state.testName,
-        result: totalResult,
-        totalQuestions: technicalTest.length,
-      },
-    });
+    // const result = await axios
+    //   .get('/qa-test/tech-results')
+    //   .then(data => console.log);
+
+    // history.push({
+    //   pathname: '/results',
+    //   state: {
+    //     testName: location.state.testName,
+    //     result: result,
+    //     totalQuestions: technicalTest.length,
+    //   },
+    // });
   };
 
   if (
@@ -62,6 +67,8 @@ export default function TestPage() {
     return <Spiner />;
   }
 
+  console.log(allQuestion);
+
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
@@ -75,7 +82,6 @@ export default function TestPage() {
           testLength={allQuestion.length}
           userСhoice={userСhoice}
           setUserСhoice={setUserСhoice}
-          setResult={updateResult}
         />
       </div>
       <div>
