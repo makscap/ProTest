@@ -1,0 +1,84 @@
+/* Modal */
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+  
+    background-color: inherit;
+  }
+  
+  .modalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 200px;
+    min-width: 600px;
+    /* width: 100%; */
+    padding: 12px;
+    margin-top: 50px;
+    background-color: #ff6b01;
+    border-radius: 3px;
+    box-shadow: 0px 2px 1px -1px #ff6b01,
+      0px 1px 1px 0px #ff6b01, 0px 1px 3px 0px #ff6b01;
+  }
+  
+  .iconBtn {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font: inherit;
+    background-color: green;
+    cursor: pointer;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .close {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url('../images/close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-color 200ms ease-in-out;
+    transition: background-color var(--animation-duration) var(--timing-function);
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    transform: scale(1.2);
+    border: none;
+    color: #ff6b01;
+    fill: #ff6b01;
+  }
+
+  @media screen and (max-width: 767px) {
+    .modalContent {
+      min-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 420px){
+    .modalContent {
+      width: 200px;
+    }
+  }
