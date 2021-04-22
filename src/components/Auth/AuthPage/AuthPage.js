@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { useSelector } from 'react-redux';
 
@@ -11,11 +10,6 @@ import { authSelectors } from '../../redux/auth';
 
 const AuthPage = () => {
   const isRegister = useSelector(authSelectors.getIsRegister);
-  // const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // function submitForm() {
-  //   setIsSubmitted(true);
-  // }
 
   return (
     <div className={styles.page_container}>
