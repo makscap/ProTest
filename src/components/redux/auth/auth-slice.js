@@ -5,6 +5,7 @@ const initialState = {
   user: { name: null, email: null },
   token: null,
   isLoggedIn: false,
+  isRegister: false,
   isFetchingCurrentUser: false,
   isRegisterError: null,
   isLoginError: null,
@@ -17,7 +18,8 @@ const authSlice = createSlice({
     [authOperations.register.fulfilled](state, action) {
       state.user = action.payload;
       state.token = action.payload.token;
-      state.isLoggedIn = true;
+      state.isRegister = true;
+      state.isLoggedIn = false;
     },
     [authOperations.register.pending](state) {
       state.isRegisterError = true;

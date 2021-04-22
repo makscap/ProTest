@@ -1,5 +1,5 @@
-import { Suspense, useEffect } from 'react';
-import { Switch } from 'react-router-dom';
+import { Suspense, useEffect, useRef } from 'react';
+import { Switch, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { authSelectors, authOperations } from '../src/components/redux/auth';
 
@@ -11,7 +11,7 @@ import UsefulInfo from './components/UsefulInfo';
 import ResultPage from './components/ResultPage/ResultPage';
 import ContactsPage from './components/ContactsPage/ContactsPage';
 import Footer from './components/Footer/Footer';
-import AuthPage from './components/Auth/AuthPage';
+import AuthPage from './components/Auth/AuthPage/AuthPage';
 import Spiner from './components/Spiner/Spiner';
 
 import {
@@ -24,13 +24,17 @@ import PublicRoute from './components/Routes/PublicRoute'; //restricted
 
 function App() {
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  const currentUrl = useRef(location);
+  console.log(location);
 
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
-  // useEffect(() => {
-  //   dispatch(authOperations.fetchCurrentUser());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(authOperations.fetchCurrentUser());
+  }, [dispatch]);
 
   return (
     <Container>
@@ -38,9 +42,9 @@ function App() {
       {isFetchingCurrentUser ? (
         <Spiner />
       ) : (
-        <Suspense>
+        <Suspense fallback={<Spiner />}>
           <Switch>
-            <PublicRoute path="/auth" exact restricted>
+            <PublicRoute path="/auth" redirectTo={currentUrl} exact restricted>
               <AuthPage />
             </PublicRoute>
 
