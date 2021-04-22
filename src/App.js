@@ -11,7 +11,7 @@ import UsefulInfo from './components/UsefulInfo';
 import ResultPage from './components/ResultPage/ResultPage';
 import ContactsPage from './components/ContactsPage/ContactsPage';
 import Footer from './components/Footer/Footer';
-import AuthPage from './components/AuthPage';
+import AuthPage from './components/Auth/AuthPage';
 import Spiner from './components/Spiner/Spiner';
 
 import {
@@ -28,9 +28,9 @@ function App() {
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
-  useEffect(() => {
-    dispatch(authOperations.fetchCurrentUser());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(authOperations.fetchCurrentUser());
+  // }, [dispatch]);
 
   return (
     <Container>
