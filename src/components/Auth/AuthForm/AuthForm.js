@@ -1,8 +1,41 @@
-import GoogleAuth from '../GoogleAuth';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { authOperations } from '../../redux/auth';
+import GoogleAuth from '../AuthGoogle';
 import styles from './AuthForm.module.css';
 
-const AuthForm = props => {
-  const { email, password, handleLogin, handleRegister, handleChange } = props;
+export default function AuthForm() {
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleChange = ({ target: { name, value } }) => {
+    switch (name) {
+      case 'email':
+        return setEmail(value);
+      case 'password':
+        return setPassword(value);
+      default:
+        return;
+    }
+  };
+
+  const handleRegister = e => {
+    e.preventDefault();
+
+    dispatch(authOperations.register({ email, password }));
+
+    setEmail('');
+    setPassword('');
+  };
+
+  const handleLogin = e => {
+    e.preventDefault();
+
+    dispatch(authOperations.logIn({ email, password }));
+    setEmail('');
+    setPassword('');
+  };
 
   return (
     <div className={styles.Form_container}>
@@ -52,6 +85,4 @@ const AuthForm = props => {
       </form>
     </div>
   );
-};
-
-export default AuthForm;
+}

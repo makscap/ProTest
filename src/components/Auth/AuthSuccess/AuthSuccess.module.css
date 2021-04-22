@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+
+.div_container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  height: auto;
+
+  padding: 30px;
+  margin: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  background-color: #fff;
+
+  font-family: Montserrat;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.div_title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #000000;
+}
+
+.div_sub_title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.div_text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.bold_items {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* SCREEN TABLET */
+@media screen and (min-width: 768px) {
+  .div_container {
+    width: 510px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .div_title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 20px;
+
+    color: #000000;
+  }
+
+  .div_sub_title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 20px;
+  }
+
+  .div_text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
