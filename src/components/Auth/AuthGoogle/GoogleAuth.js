@@ -2,30 +2,18 @@ import React from 'react';
 
 import { GoogleLogin } from 'react-google-login';
 import { FcGoogle } from 'react-icons/fc';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
-import { authOperations, authSelectors } from '../redux/auth';
+import { authOperations } from '../../redux/auth';
 
 import styles from './GoogleAuth.module.css';
 
 export default function GoogleAuth() {
   const dispatch = useDispatch();
-  const history = useHistory();
-  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
   const handleLogin = async googleData => {
-    // const user = googleData?.profileObj;
     const token = googleData?.tokenId;
-    try {
-      dispatch(authOperations.googleIn({ token }));
-      if (!isLoggedIn) {
-        history.push('/auth');
-      }
-      history.push('/');
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(authOperations.googleIn({ token }));
   };
   return (
     <GoogleLogin
