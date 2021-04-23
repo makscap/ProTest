@@ -50,7 +50,7 @@ const googleIn = createAsyncThunk('auth/google', async credentials => {
     return data.data;
   } catch (error) {
     toast.error(userErrorMessages.AUTH_FAILED);
-    console.log('This is login error', error);
+    console.log('This is google error', error);
     throw error();
   }
 });
