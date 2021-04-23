@@ -1,18 +1,24 @@
-import React from 'react';
-import styles from './ToggleIconMenu.module.css';
+// import React from 'react';
+import styles from './ProfileToggle.module.css';
 import { useSelector } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
 import ProfileMenu from '../ProfileMenu/ProfileMenu';
+import React, { useState } from 'react';
 
-
-function ToggleIconMenu({ isOpen,isOpenProfile, onClick,onClickProfile, isLoggedIn }) {
+function ToggleIconMenu({ isOpen, setOpen,isOpenProfile, onClick, isLoggedIn }) {
   const name = useSelector(authSelectors.getUserEmail) || 'Error';
   const nameLetter = name[0].toUpperCase();
+  // const [isOpen, setOpen] = useState(false);
+
+  // При клике на иконку - меню октрывается/закрывается
+  // const handleIcon = () => {
+  //   setOpen(!isOpen);
+  // };
 
   return (
     <div className={styles.avatarAbdButton}>
       {isLoggedIn
-        && <ProfileMenu isOpenProfile={isOpenProfile} onClick={onClickProfile} />}
+        &&       <ProfileMenu isOpenProfile={!isOpenProfile} onClick={onClick} />}
 
     <div >
       <div className={styles.toggleField} onClick={onClick}>

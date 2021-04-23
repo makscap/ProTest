@@ -6,18 +6,22 @@ import Logo from './Logo';
 import BurgerMenuList from './BurgerMenuList';
 import ToggleIconMenu from './ToggleIconMenu';
 import s from './Statefull.module.css';
+import Profile from './Profile/Profile';
 import ProfileMenu from './ProfileMenu/ProfileMenu';
 
 export default function AppBar() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   const [isOpen, setOpen] = useState(false);
-  const [isOpenProfile, setOpenProfile] = useState(false);
+
   const [isOpenMenu, setOpenMenu] = useState(false);
+  const [isOpenProfile, setOpenProfile] = useState(false);
 
   // При клике на иконку - меню октрывается/закрывается
+
   const handleIcon = () => {
     setOpen(!isOpen);
   };
+
   const handleIconProfile = () => {
     // if (isOpenMenu) {
     //   setOpenMenu(!isOpenMenu);
@@ -28,6 +32,7 @@ export default function AppBar() {
 
     // setOpen(!isOpen);
   };
+
   // При клике на ссылку - меню закрывается
   const closeBurgerMenu = () => {
     setOpen(false);
@@ -43,15 +48,6 @@ export default function AppBar() {
     <header className={s.header}>
       <Logo />
       <Navigation isLoggedIn={isLoggedIn} />
-
-      {/* {isOpenProfile && (
-        <ProfileMenu
-          onClick={LogOut}
-          isLoggedIn={isLoggedIn}
-          closeBurgerMenu={closeBurgerMenu}
-        />
-      )} */}
-
       {isOpen && (
         <BurgerMenuList
           onClick={LogOut}
@@ -59,13 +55,18 @@ export default function AppBar() {
           closeBurgerMenu={closeBurgerMenu}
         />
       )}
+
       <ToggleIconMenu
-        isOpen={isOpen}
+        isOpenMenu={isOpenMenu}
+        setOpenMenu={setOpenMenu}
         isOpenProfile={isOpenProfile}
         setOpenProfile={setOpenProfile}
+        // ++++
+        isOpen={isOpen}
+        setOpen={setOpen}
         isLoggedIn={isLoggedIn}
-        onClick={handleIcon}
-        onClickProfile={handleIconProfile}
+        onClick={handleIconProfile}
+        isOpenProfileMenu={isOpen}
       />
     </header>
   );

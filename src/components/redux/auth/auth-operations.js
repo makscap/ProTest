@@ -4,7 +4,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import userErrorMessages from '../../Auth/AuthPage/Errors';
 
-axios.defaults.baseURL = 'http://protest-api.herokuapp.com';
+axios.defaults.baseURL = 'https://sleepy-lumiere-356bf3.netlify.app';
 
 const token = {
   set(token) {

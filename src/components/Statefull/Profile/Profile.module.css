@@ -1,0 +1,50 @@
+.avatar {
+    width: 200px;
+    height: auto;
+    
+}
+.mainBlock{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+        height: 750px;
+}
+.block {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    background-color: white;
+    height: 200px;
+    border: 1px solid black;
+}
+
+
+.topicTheme {
+    padding: 20px 0px;
+    padding-left: 20px;
+    margin: 0px;
+}
+
+.item {
+    padding: 5px 0px;
+}
+
+.itemTrue {
+    color: green;
+    font-weight: bold;
+    font-size: 12px;
+        padding: 10px 0px;
+}
+
+.itemFalse {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+        padding: 10px 0px;
+}
+
+.ulBox {
+    /* padding-top: 10px; */
+    padding-left: 20px;
+    margin: 0px;
+}
