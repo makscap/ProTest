@@ -4,7 +4,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import userErrorMessages from '../../Auth/AuthPage/Errors';
 
-axios.defaults.baseURL = 'https://sleepy-lumiere-356bf3.netlify.app';
+axios.defaults.baseURL = 'http://protest-api.herokuapp.com';
 
 const token = {
   set(token) {
@@ -46,12 +46,12 @@ const googleIn = createAsyncThunk('auth/google', async credentials => {
   try {
     const { data } = await axios.post('/api/users/google', credentials);
     token.set(data.data.token);
-    console.log(data.data);
+    // console.log(data.data);
     return data.data;
   } catch (error) {
-    toast.error(userErrorMessages.AUTH_FAILED);
+    // toast.error(userErrorMessages.AUTH_FAILED);
     console.log('This is login error', error);
-    throw error();
+    // throw error();
   }
 });
 
@@ -74,15 +74,14 @@ const fetchCurrentUser = createAsyncThunk(
       console.log('Токена нет, уходим из fetchCurrentUser');
       return thunkAPI.rejectWithValue();
     }
+
     token.set(persistedToken);
     try {
       const { data } = await axios.get('/api/users/current');
-      console.log(data.data);
+      console.log('CURRENT TOKEN', data);
       return data.data;
     } catch (error) {
-      toast.info(userErrorMessages.CURRENT_USER_FAILED);
-      console.log('This is current user error', error);
-      throw error();
+      console.log(error);
     }
   },
 );
