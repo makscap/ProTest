@@ -17,7 +17,7 @@ export default function GoogleAuth() {
   };
   return (
     <GoogleLogin
-      clientId="814991395296-bn2u0ikjh0g5rkph9aqc8e58d5bnmelj.apps.googleusercontent.com"
+      clientId="155122661191-v5r1kdk24ck9v66sl6br39btn872euqd.apps.googleusercontent.com"
       render={renderProps => (
         <div
           className={styles.button__google}
