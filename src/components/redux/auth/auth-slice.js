@@ -31,15 +31,12 @@ const authSlice = createSlice({
       state.user = action.payload;
       state.token = action.payload.token;
       state.isLoggedIn = true;
-      state.fetchCurrentUser = true;
     },
     [authOperations.logIn.pending](state) {
       state.isLoginError = true;
-      state.fetchCurrentUser = false;
     },
     [authOperations.logIn.rejected](state) {
       state.isLoginError = false;
-      state.fetchCurrentUser = false;
     },
     [authOperations.googleIn.fulfilled](state, action) {
       state.user = action.payload.user;
