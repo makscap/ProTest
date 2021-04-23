@@ -25,8 +25,8 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "protest-api start",
-    "build": "protest-api build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
