@@ -74,14 +74,15 @@ const fetchCurrentUser = createAsyncThunk(
       console.log('Токена нет, уходим из fetchCurrentUser');
       return thunkAPI.rejectWithValue();
     }
-
     token.set(persistedToken);
     try {
       const { data } = await axios.get('/api/users/current');
-      console.log('CURRENT TOKEN', data);
+      console.log(data.data);
       return data.data;
     } catch (error) {
-      console.log(error);
+      toast.info(userErrorMessages.CURRENT_USER_FAILED);
+      console.log('This is current user error', error);
+      throw error();
     }
   },
 );
