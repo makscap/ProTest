@@ -21,6 +21,7 @@ import {
 
 import PrivateRoute from './components/Routes/PrivatRoute';
 import PublicRoute from './components/Routes/PublicRoute'; //restricted
+import Profile from './components/Statefull/Profile/Profile';
 
 function App() {
   const dispatch = useDispatch();
@@ -58,6 +59,10 @@ function App() {
 
             <PublicRoute path="/contacts">
               <ContactsPage />
+            </PublicRoute>
+
+            <PublicRoute path="/profile">
+              <Profile />
             </PublicRoute>
 
             <PrivateRoute path="/results">
