@@ -49,11 +49,9 @@ const googleIn = createAsyncThunk('auth/google', async credentials => {
     // console.log(data.data);
     return data.data;
   } catch (error) {
-    
     toast.error(userErrorMessages.AUTH_FAILED);
     console.log('This is google error', error);
     throw error();
-
   }
 });
 
@@ -83,7 +81,8 @@ const fetchCurrentUser = createAsyncThunk(
       console.log('CURRENT TOKEN', data);
       return data.data;
     } catch (error) {
-      console.log(error);
+      toast.info(userErrorMessages.CURRENT_USER_FAILED);
+      throw error();
     }
   },
 );

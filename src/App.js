@@ -28,7 +28,6 @@ function App() {
   const location = useLocation();
 
   const currentUrl = useRef(location);
-  console.log(location);
 
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
