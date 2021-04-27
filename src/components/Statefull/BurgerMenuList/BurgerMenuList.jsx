@@ -4,9 +4,11 @@ import s from './BurgerMenuList.module.css';
 import SignOutImg from '../../../images/sign-out.svg';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
+import { useTranslation } from 'react-i18next';
 
 function BurgerMenuList({ isLoggedIn, closeBurgerMenu }) {
   const dispatch = useDispatch();
+    const { t } = useTranslation();
 
   return isLoggedIn ? (
     <div className={s.modalField}>
@@ -19,7 +21,7 @@ function BurgerMenuList({ isLoggedIn, closeBurgerMenu }) {
             exact={true}
             onClick={closeBurgerMenu}
           >
-            Home
+                      {t('header__menuHome')}
           </NavLink>
         </li>
         <li className={s.listItem}>
@@ -29,7 +31,7 @@ function BurgerMenuList({ isLoggedIn, closeBurgerMenu }) {
             className={s.link}
             onClick={closeBurgerMenu}
           >
-            Materials
+                      {t('header__menuMaterials')}
           </NavLink>
         </li>
         <li className={s.listItem}>
@@ -39,7 +41,7 @@ function BurgerMenuList({ isLoggedIn, closeBurgerMenu }) {
             className={s.link}
             onClick={closeBurgerMenu}
           >
-            Contacts
+                      {t('header__menuContacts')}
           </NavLink>
         </li>
         <li className={s.listItem}>
@@ -58,7 +60,7 @@ function BurgerMenuList({ isLoggedIn, closeBurgerMenu }) {
             className={s.link}
             onClick={closeBurgerMenu}
           >
-            Contacts
+                                  {t('header__menuContacts')}
           </NavLink>
         </li>
       </ul>

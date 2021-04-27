@@ -13,6 +13,7 @@ import ContactsPage from './components/ContactsPage/ContactsPage';
 import Footer from './components/Footer/Footer';
 import AuthPage from './components/Auth/AuthPage/AuthPage';
 import Spiner from './components/Spiner/Spiner';
+import SettingsContainer from '../src/components/Statefull/SettingsContainer/SettingsContainer';
 
 import {
   literature,
@@ -39,6 +40,8 @@ function App() {
 
   return (
     <Container>
+      <SettingsContainer />
+
       <Statefull isLoggedIn={isLoggedIn} />
       {isFetchingCurrentUser ? (
         <Spiner />

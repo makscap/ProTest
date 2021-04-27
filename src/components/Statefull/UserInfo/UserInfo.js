@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { authOperations, authSelectors } from '../../redux/auth';
 import ProfileMenu from '../ProfileMenu/ProfileMenu';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ export default function UserMenu() {
   const nameLetter = name[0].toUpperCase();
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   const [isOpenProfile, setOpenProfile] = useState(false);
+  const { t } = useTranslation();
 
   // При клике на иконку - меню октрывается/закрывается
   const handleIcon = () => {
@@ -28,7 +30,7 @@ export default function UserMenu() {
           className={styles.userLink}
           activeClassName={styles.userLinkActive}
         >
-          Home
+          {t('header__menuHome')}
         </NavLink>
 
         <NavLink
@@ -37,7 +39,7 @@ export default function UserMenu() {
           className={styles.userLink}
           activeClassName={styles.userLinkActive}
         >
-          Materials
+          {t('header__menuMaterials')}
         </NavLink>
 
         <NavLink
@@ -46,7 +48,7 @@ export default function UserMenu() {
           className={styles.userLink}
           activeClassName={styles.userLinkActive}
         >
-          Contacts
+          {t('header__menuContacts')}
         </NavLink>
       </div>
 
