@@ -6,7 +6,6 @@ import Logo from './Logo';
 import BurgerMenuList from './BurgerMenuList';
 import ToggleIconMenu from './ToggleIconMenu';
 import s from './Statefull.module.css';
-import ProfileMenu from './ProfileMenu/ProfileMenu';
 
 export default function AppBar() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
