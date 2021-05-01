@@ -1,5 +1,35 @@
 {
   "header__menuHome": "Главная",
       "header__menuContacts": "Контакти",
-      "header__menuMaterials": "Материалы"
+      "header__menuMaterials": "Материалы",
+
+  "useInfo-literature": "Полезная литература ",
+  "useInfo-resources": "Полезные ресурсы",
+
+  "team-title": "Наша команда",
+
+  "mainPage-description": "Регрессионное тестирование. Что это? Если <1></1> система компилируется, то это хорошо, если загружается, то это просто здорово!",
+  "mainPage-author": "Линус Торвальдс",
+  "mainPage-authorDescription": "Финский программист, хакер, 1969 г.",
+  "mainPage-techTest": "Техническая подготовка QA ",
+  "mainPage-theoryTest": "Теория тестирования",
+
+  "testing-finishBtn": "Завершить тест",
+  "testing-previousBtn":"Предыдущий вопрос",
+  "testing-nextBtn": "Следующий вопрос",
+
+  "login-test-description":"<1>[</1> Мы поможем найти слабые места в знаниях, чтобы вы смогли их усилить. Покажем что актуально знать для <1>QA Engineer</1> и постараемся сделать процесс познания более разнообразным_ <1>]</1>",
+  "login-google-description":"Для авторизации можете использовать Google Account:",
+  "login-google-description-form":"Или войдите в приложение используя e-mail и пароль:",
+  "login-google-email":"Почта*",
+  "login-google-password":"Пароль*",
+  "login-form-validate":"*Это поле не может быть пустым",
+  "login-signIn":"ВОЙТИ",
+  "login-signUp":"РЕГИСТРАЦИЯ",
+
+  "modal-title":"Вы уверены, что хотите закончить тест?",
+  "modal-text":"Ваш прогресс не будет сохранен",
+  "modal-exitBtn":"Выйти"
+  
+
 }

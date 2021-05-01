@@ -1,6 +1,34 @@
 {
   "header__menuHome": "Home",
-    "header__menuContacts": "Contacts",
-      "header__menuMaterials": "Materials"
-  
+  "header__menuContacts": "Contacts",
+  "header__menuMaterials": "Materials",
+
+  "useInfo-literature": "Useful literature",
+  "useInfo-resources": "Useful resources",
+
+  "team-title": "Our team",
+
+  "mainPage-description": "Regression testing. What is it?  <1></1> If the system compiles, that's good, if it boots, that's great!",
+  "mainPage-author": "Linus Torvalds",
+  "mainPage-authorDescription": "Linux kernel creator, hacker, 1969",
+  "mainPage-techTest": "QA technical training",
+  "mainPage-theoryTest": "Testing theory",
+
+  "testing-finishBtn": "Finish test",
+  "testing-previousBtn":"Previous question",
+  "testing-nextBtn": "Next question",
+
+  "login-test-description":"<1>[</1> We will help you find weak points in knowledge so that you can strengthen it. We will show you what is relevant to know for a <1>QA Engineer</1> and will try to make the learning process more diverse_ <1>]</1>",
+  "login-google-description":"You can use your Google Account to authorize:",
+  "login-google-description-form":"Or login to our app using e-mail and password:",
+  "login-google-email":"E-mail*",
+  "login-google-password":"Password*",
+  "login-form-validate":"*This field cannot be empty",
+  "login-signIn":"SIGN IN",
+  "login-signUp":"SIGN UP",
+
+  "modal-title":"Are you sure you want to finish the test?",
+  "modal-text":"Your result will be lost",
+  "modal-exitBtn":"Exit"
+
 }

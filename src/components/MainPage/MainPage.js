@@ -1,19 +1,25 @@
 import { Link, useLocation } from 'react-router-dom';
 import s from './MainPage.module.css';
 import arrow from '../images/arrow.svg';
-import {TypeTest} from '../../helpers/constant'
+import { TypeTest } from '../../helpers/constant'
+import {useTranslation ,Trans} from 'react-i18next';
+
 
 export default function MainPage() {
     const location = useLocation();
+    const { t } = useTranslation();
 
     return (
     <div className={s.mainPage}>
-       <div className={s.mainBlock}>
-        <p className={s.quotation}>“Regression testing. What is it?  <br></br>
-        If the system compiles, that's good, if it boots, that's great!”</p>
+            <div className={s.mainBlock}>
+                <p className={s.quotation}>“
+                 <Trans i18nKey="mainPage-description">
+                      Some newlines <br/> would be <br/> fine
+                    </Trans>
+                ”</p>
        <span className={s.author}></span>
-       <p className={s.authorName}>Linus Torvalds</p>
-           <p className={s.authorInfo}>Linux kernel creator, hacker, 1969</p>
+       <p className={s.authorName}>{t('mainPage-author')}</p>
+           <p className={s.authorInfo}>{t('mainPage-authorDescription')}</p>
         </div> 
 
         <div className={s.buttons}>
@@ -29,7 +35,7 @@ export default function MainPage() {
         }}
         >
         <button type="button" className={s.buttonFirst}>
-            <p className={s.buttonText}>QA technical training</p>
+            <p className={s.buttonText}>{t('mainPage-techTest')}</p>
             <img src={arrow} alt="arrow" className={s.arrow} />
         </button>
         </Link>
@@ -44,7 +50,7 @@ export default function MainPage() {
         }}
         >
         <button type="button" className={s.buttonSecond}>
-            <p className={s.buttonText}>Testing theory</p>
+            <p className={s.buttonText}>{t('mainPage-theoryTest')}</p>
             <img src={arrow} alt="arrow" className={s.arrow} />
         </button>
         </Link>
