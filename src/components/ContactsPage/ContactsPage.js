@@ -30,7 +30,6 @@ export default function ContactsPage() {
             ))}
                 
                 </ul>
-               
             </div>
     )
 }

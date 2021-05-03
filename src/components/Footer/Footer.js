@@ -6,6 +6,7 @@ import heart from '../images/heart.svg';
 export default function Footer () {
     const location = useLocation();
     return (
+        <div className={s.footerDiv}>
         <div className={s.footer}>
             <div className={s.footerInfo}>
                 <span>
@@ -27,6 +28,6 @@ export default function Footer () {
                 </span>
             </div>
         </div>
-        
+        </div>
     )
 }

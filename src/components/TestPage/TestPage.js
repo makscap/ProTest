@@ -1,6 +1,5 @@
 import axios from 'axios';
 import Spiner from '../Spiner/Spiner.js';
-
 import { useLocation, useHistory } from 'react-router-dom';
 
 import { useState } from 'react';

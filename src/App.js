@@ -10,7 +10,7 @@ import Statefull from './components/Statefull';
 import UsefulInfo from './components/UsefulInfo';
 import ResultPage from './components/ResultPage/ResultPage';
 import ContactsPage from './components/ContactsPage/ContactsPage';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import AuthPage from './components/Auth/AuthPage/AuthPage';
 import Spiner from './components/Spiner/Spiner';
 
@@ -38,6 +38,7 @@ function App() {
   }, [dispatch]);
 
   return (
+    
     <Container>
       <Statefull isLoggedIn={isLoggedIn} />
       {isFetchingCurrentUser ? (
@@ -74,8 +75,8 @@ function App() {
             </PrivateRoute>
           </Switch>
         </Suspense>
+
       )}
-      <Footer />
     </Container>
   );
 }
