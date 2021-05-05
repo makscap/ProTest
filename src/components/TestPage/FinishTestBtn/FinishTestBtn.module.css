@@ -10,6 +10,11 @@
   outline: none;
 }
 
+.modalButtons {
+  display: flex;
+  align-items: center;
+}
+
 .modalText {
   display: flex;
   align-items: center;
@@ -27,12 +32,23 @@
 }
 
 .button {
-  width: 80px;
-  height: 30px;
+  width: 120px;
+  height: 50px;
   margin-top: 35px;
   outline: none;
   border: none;
   border-radius: 3px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #02172a;
+  color: #fff;
+}
+
+.buttonResult {
+  composes: button;
+  margin-left: 40px;
 }
 
 @media screen and (max-width: 767px) {
