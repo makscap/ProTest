@@ -1,9 +1,14 @@
+.mainPage {
+    padding-top: 122px;
+  padding-bottom: 95px;
+}
+
 .mainBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 122px;
+  
 }
 
 .quotation {
@@ -56,7 +61,12 @@
     }
 
 @media screen and (max-width: 768px){
-   .buttons {
+   .mainPage {
+    padding-top: 40px;
+    padding-bottom: 40px;
+   }
+   
+    .buttons {
        display: flex;
        align-items: center;
        flex-direction: column;

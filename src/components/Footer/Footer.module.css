@@ -1,6 +1,8 @@
+.footerDiv {
+position: relative;
+}
+
 .footer {
-  position: absolute;
-  bottom: auto;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -10,7 +12,9 @@
 
 @media screen and (min-width: 1440px){
   .footer {
-    position: absolute;
+    position: fixed;
+    bottom: 0; 
+    right: 0;
   }
 }
 
