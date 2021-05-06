@@ -1,12 +1,14 @@
 import Developer from '../Developers/Developers';
 import developers from './developers.json';
 import s from './ContactPage.module.css';
+import {useTranslation} from 'react-i18next';
 
 export default function ContactsPage() {
+    const { t } = useTranslation();
     return (
 <div className={s.contactsPage}>
         <div className={s.mainBlock}>
-        <h1 className={s.title}>Our team</h1>
+        <h1 className={s.title}>{t('team-title')}</h1>
        <span className={s.line}></span>
     
             </div>
@@ -30,7 +32,6 @@ export default function ContactsPage() {
             ))}
                 
                 </ul>
-               
             </div>
     )
 }

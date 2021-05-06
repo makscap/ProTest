@@ -10,7 +10,7 @@ import Statefull from './components/Statefull';
 import UsefulInfo from './components/UsefulInfo';
 import ResultPage from './components/ResultPage/ResultPage';
 import ContactsPage from './components/ContactsPage/ContactsPage';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import AuthPage from './components/Auth/AuthPage/AuthPage';
 import Spiner from './components/Spiner/Spiner';
 import SettingsContainer from '../src/components/Statefull/SettingsContainer/SettingsContainer';
@@ -38,6 +38,7 @@ function App() {
   }, [dispatch]);
 
   return (
+    
     <Container>
       <SettingsContainer />
 
@@ -76,8 +77,8 @@ function App() {
             </PrivateRoute>
           </Switch>
         </Suspense>
+
       )}
-      <Footer />
     </Container>
   );
 }
