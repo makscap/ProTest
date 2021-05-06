@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
+import {useTranslation } from 'react-i18next';
 import GoogleAuth from '../AuthGoogle';
 import styles from './AuthForm.module.css';
 
@@ -8,6 +9,7 @@ export default function AuthForm() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { t } = useTranslation()
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -41,11 +43,11 @@ export default function AuthForm() {
     <div className={styles.Form_container}>
       <form>
         <p className={styles.header}>
-          You can use your Google Account to authorize:
+          {t('login-google-description')}
         </p>
         <GoogleAuth />
         <p className={styles.header}>
-          Or login to our app using e-mail and password:
+          {t('login-google-description-form')}
         </p>
         <label className={styles.form_label}>
           <input
@@ -57,7 +59,9 @@ export default function AuthForm() {
             onChange={handleChange}
             className={styles.input_item}
           />
-          <span className={styles.plaseholder}>E-mail*</span>
+          <span className={styles.plaseholder}>
+            {t('login-google-email')}
+          </span>
         </label>
         <label className={styles.form_label}>
           <input
@@ -69,17 +73,19 @@ export default function AuthForm() {
             onChange={handleChange}
             className={styles.input_item}
           />
-          <span className={styles.plaseholder}>Password*</span>
+          <span className={styles.plaseholder}>
+            {t('login-google-password')}
+          </span>
         </label>
         <span className={styles.warning_message}>
-          *This field cannot be empty
+          {t('login-form-validate')}
         </span>
         <div className={styles.button_container}>
           <button onClick={handleLogin} className={styles.button}>
-            Sign in
+            {t('login-signIn')}
           </button>
           <button onClick={handleRegister} className={styles.button}>
-            Sign Up
+            {t('login-signUp')}
           </button>
         </div>
       </form>
