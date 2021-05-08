@@ -50,15 +50,6 @@ export default function UserMenu() {
         >
           {t('header__menuContacts')}
         </NavLink>
-
-        <NavLink
-          to="/results"
-          exact
-          className={styles.userLink}
-          activeClassName={styles.userLinkActive}
-        >
-          MODAL?
-        </NavLink>
       </div>
 
       {/* <div className={styles.avatar}>
