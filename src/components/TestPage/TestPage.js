@@ -37,12 +37,7 @@ export default function TestPage() {
         ? '/qa-test/tech-results'
         : '/qa-test/theory-results';
 
-    console.log(url);
-
-    console.log(answersObject);
-
     const result = await axios.post(url, answersObject);
-    console.log(result.data.data);
 
     history.push({
       pathname: '/results',
@@ -79,7 +74,9 @@ export default function TestPage() {
     <div className={s.wrapper}>
       <div className={s.container}>
         <TestName testName={location.state.testName} />
-        <FinishTestBtn showResult={showResult} />
+        {testNumber + 1 < allQuestion.length && (
+          <FinishTestBtn showResult={showResult} />
+        )}
       </div>
       <div>
         <Test
@@ -95,6 +92,8 @@ export default function TestPage() {
           updateNumber={setTestNumber}
           testLength={allQuestion.length}
           numberQuestion={testNumber}
+          showResult={showResult}
+          testNumber={testNumber}
         />
       </div>
     </div>
