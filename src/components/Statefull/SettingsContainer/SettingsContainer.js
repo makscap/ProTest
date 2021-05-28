@@ -28,8 +28,7 @@ export default function SettingsContainer() {
       </div>
 
       {/* Переключатель теми */}
-      {/* <div> */}
-      <svg
+      {/* <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         width="512"
@@ -43,8 +42,7 @@ export default function SettingsContainer() {
           fill="#fff"
           d="M0 224c0-88.25 71.75-160 160-160h192c88.25 0 160 71.75 160 160s-71.75 160-160 160h-192c-88.25 0-160-71.75-160-160zM352 352c70.5 0 128-57.5 128-128s-57.5-128-128-128-128 57.5-128 128 57.5 128 128 128z"
         ></path>
-      </svg>
+      </svg> */}
     </div>
-    // </div>
   );
 }
